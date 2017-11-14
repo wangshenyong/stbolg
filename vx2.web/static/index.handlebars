@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN" v-app="ibsapp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="product" content="Metro UI CSS Framework">
+    <meta name="description" content="Simple responsive css framework">
+    <meta name="author" content="CSII">
+    <meta name="keywords" content="js, css, metro, framework, windows 8, metro ui">
+    <link rel="shortcut icon" href="images/Favicon.ico">
+    {{#unless productMode}}
+    <!-- 预生产模式 -->
+    <link href="css/all.css" rel="stylesheet">
+    {{else}}
+    <!-- 生产模式 -->
+    <link href="css/all.min.css" rel="stylesheet">
+    {{/unless}}
+    <title>科蓝公司-个人网银</title>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body v-controller="MainCtrl" v-init="startupMain();">
+    <!--v-view-->
+    <div ui-view></div>
+
+    <!-- jquery引用 -->
+    <script type="text/javascript" src="lib/min/jquery-1.11.1.min.js"></script>
+    <!-- VX2 -->
+    <script type="text/javascript" src="lib/min/vx2.min.js"></script>
+    {{#unless productMode}}
+    <!-- 预生产模式 -->
+    <script src="lib/min/all.js"></script>
+    {{else}}
+    <!-- 生产模式 -->
+    <script src="lib/min/all.min.js"></script>
+    {{/unless}}
+  </body>
+</html>

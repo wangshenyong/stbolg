@@ -1,0 +1,50 @@
+<form name="formCom" v-submit="MobileRechargeOrder()" novalidate>
+	<div class="charge">
+		<h2>话费充值</h2>
+		<table class="tabList">
+			<tbody>
+			<tr>
+				<td class="tit">联系人</td>
+				<td>{{confirmData.contactName}}</td>
+			</tr>
+			<tr>
+				<td class="tit">缴费号码</td>
+				<td><em>{{confirmData.ProductID}}</em> <span class="gray">({{contact.region}}）</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="tit">充值面值</td>
+				<td>{{confirmData.FaceAmt+'元'}}</td>
+			</tr>
+			<tr>
+				<td class="tit">需付金额</td>
+				<td class="red"><em>{{confirmData.SellPrice+'元'}}</em></td>
+			</tr>
+			<tr>
+				<td class="tit"><em class="red">*</em> 付款账户</td>
+				<td>{{confirmData.PayAccount|accountNoFilter}}</td>
+			</tr>
+			<tr>
+				<td class="tit"><em class="red">*</em> 付款用户</td>
+				<td>{{confirmData.PayName}}</td>
+			</tr>
+			<tr>
+				<td class="tit">图形验证码</td>
+				<td>
+					<p><img src="images/yanzheng_03.jpg"></p>
+
+					<p>看不清？请<a class="blue" href="#">刷新</a>请仔细核对上图中的收款人名称和收款账号，如有问题请您停止交易并向银行咨询！</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="tit"><em class="red">*</em>请输入图形验证码</td>
+				<td><input class="inpt" type="text" name="verifyCode2" v-model="verifyCode2" required>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="btnboxs"><input type="submit" value="确认">
+			<input type="button" value="返回" class="back" v-click="goto('#1')">
+		</div>
+	</div>
+</form>

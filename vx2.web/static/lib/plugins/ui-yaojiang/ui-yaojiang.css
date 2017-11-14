@@ -1,0 +1,186 @@
+.uiYaojiang #leftCloud{
+	float:left; top:60px; position:absolute; left: -1px;
+}
+.uiYaojiang #rightCloud{
+	float:right;position:absolute;	top:30px;right: 1px;
+}
+.uiYaojiang .wallet1{	position: absolute; left: 35%; top: 17%;}
+.uiYaojiang .wallet2{	position: absolute; left: 28%; top: 30%;}
+.uiYaojiang .wallet3{	position: absolute; right: 20%; top: 25%;}
+.uiYaojiang .wallet4{	position: absolute; left: 20%; top: 24%;}
+.uiYaojiang .wallet5{	position: absolute; left: 54%; top: 16%;}
+.uiYaojiang .wallet6{	position: absolute; right: 23%; top: 44%;}
+.uiYaojiang .wallet7{	position: absolute; right: 19%; top: 52%;}
+.uiYaojiang .wallet8{	position: absolute; right: 8%; top: 38%;}
+.uiYaojiang .wallet9{	position: absolute; left: 16%; top: 50%;}
+.uiYaojiang .wallet10{	position: absolute; left: 8%; top: 38%;}
+.uiYaojiang .wallet11{	position: absolute; right: 34%; top: 40%;}
+.uiYaojiang .wallet12{	position: absolute; left: 33%; top: 46%;}
+.uiYaojiang .wallet13{	position: absolute; left: 46%; top: 30%;}
+.uiYaojiang .haveTimes{
+	font-size: 24px;color: #FFF;right:30.50% !important;font-weight: bold;position: absolute; bottom:17.80%;
+}
+.uiYaojiang .floatImg{
+	position: relative;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	width: 220px;
+	height: 250px;
+}
+.uiYaojiang #floatId{
+	position: fixed;
+	z-index: 2000000001 !important;
+}
+.uiYaojiang #floatId #floatImg #contentDiv{
+	color: #ccc;
+	font-weight:bold;
+	font-size:14px;
+	text-align:center !important;
+	font-family:"Microsoft Yahei";
+	line-height:18px;
+	word-spacing:-2px;
+	width: 220px;
+	height: 250px;
+	padding: 80px 37px 100px 22px;
+	text-align:justify;
+}
+@keyframes shake{
+		0%, 100%{-moz-transform: rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		10%, 30%, 50%, 70%{-moz-transform:rotate(12deg);-ms-transform:rotate(12deg);-webkit-transform:rotate(12deg);transform:rotate(12deg);}
+		20%, 40%, 60%, 80%{-moz-transform:rotate(-12deg);-ms-transform:rotate(-12deg);-webkit-transform:rotate(-12deg);transform:rotate(-12deg);}
+}
+@-webkit-keyframes shake{
+		0%, 100%{-moz-transform: rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		10%, 30%, 50%, 70%{-moz-transform:rotate(12deg);-ms-transform:rotate(12deg);-webkit-transform:rotate(12deg);transform:rotate(12deg);}
+		20%, 40%, 60%, 80%{-moz-transform:rotate(-12deg);-ms-transform:rotate(-12deg);-webkit-transform:rotate(-12deg);transform:rotate(-12deg);}
+}
+@-moz-keyframes shake{
+		0%, 100%{-moz-transform: rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		10%, 30%, 50%, 70%{-moz-transform:rotate(12deg);-ms-transform:rotate(12deg);-webkit-transform:rotate(12deg);transform:rotate(12deg);}
+		20%, 40%, 60%, 80%{-moz-transform:rotate(-12deg);-ms-transform:rotate(-12deg);-webkit-transform:rotate(-12deg);transform:rotate(-12deg);}
+}
+@-o-keyframes shake{
+		0%, 100%{-moz-transform: rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		10%, 30%, 50%, 70%{-moz-transform:rotate(12deg);-ms-transform:rotate(12deg);-webkit-transform:rotate(12deg);transform:rotate(12deg);}
+		20%, 40%, 60%, 80%{-moz-transform:rotate(-12deg);-ms-transform:rotate(-12deg);-webkit-transform:rotate(-12deg);transform:rotate(-12deg);}
+}
+.uiYaojiang .shake{
+	-webkit-transform-origin : 50% 0%;
+	-moz-transform-origin :50% 0%;
+	-o-transform-origin :50% 0%;
+	transform-origin: 50% 0%;
+ 	-webkit-animation:shake 1s ease-out;
+ 	-moz-animation:shake 1s ease-out;
+ 	-o-animation:shake 1s ease-out;
+	animation:shake 1s ease-out ;
+}
+@keyframes shake1{
+		0%, 100%{-moz-transform: rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		10%, 30%, 50%, 70%{-moz-transform:rotate(12deg);-ms-transform:rotate(12deg);-webkit-transform:rotate(12deg);transform:rotate(12deg);}
+		20%, 40%, 60%, 80%{-moz-transform:rotate(-12deg);-ms-transform:rotate(-12deg);-webkit-transform:rotate(-12deg);transform:rotate(-12deg);}
+}
+@-webkit-keyframes shake1{
+		0%, 100%{-moz-transform: rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		10%, 30%, 50%, 70%{-moz-transform:rotate(12deg);-ms-transform:rotate(12deg);-webkit-transform:rotate(12deg);transform:rotate(12deg);}
+		20%, 40%, 60%, 80%{-moz-transform:rotate(-12deg);-ms-transform:rotate(-12deg);-webkit-transform:rotate(-12deg);transform:rotate(-12deg);}
+}
+@-moz-keyframes shake1{
+		0%, 100%{-moz-transform: rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		10%, 30%, 50%, 70%{-moz-transform:rotate(12deg);-ms-transform:rotate(12deg);-webkit-transform:rotate(12deg);transform:rotate(12deg);}
+		20%, 40%, 60%, 80%{-moz-transform:rotate(-12deg);-ms-transform:rotate(-12deg);-webkit-transform:rotate(-12deg);transform:rotate(-12deg);}
+}
+@-o-keyframes shake1{
+		0%, 100%{-moz-transform: rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		10%, 30%, 50%, 70%{-moz-transform:rotate(12deg);-ms-transform:rotate(12deg);-webkit-transform:rotate(12deg);transform:rotate(12deg);}
+		20%, 40%, 60%, 80%{-moz-transform:rotate(-12deg);-ms-transform:rotate(-12deg);-webkit-transform:rotate(-12deg);transform:rotate(-12deg);}
+}
+.uiYaojiang .shake1{
+	-webkit-transform-origin : 50% 0%;
+	-moz-transform-origin :50% 0%;
+	-o-transform-origin :50% 0%;
+	transform-origin: 50% 0%;
+ 	-webkit-animation:shake 1.2s ease-out;
+ 	-moz-animation:shake 1.2s ease-out;
+ 	-o-animation:shake 1.2s ease-out;
+	animation:shake 1.2s ease-out ;
+}
+/* 钱包摇晃 END */
+
+/* 左右摇晃 BEGIN */
+@keyframes icon-bounce{
+	0%, 100%{-webkit-transform:translateX(0);}
+ 	10%, 30%, 50%, 70%, 90%{-webkit-transform:translateX(-10px);}
+ 	20%, 40%, 60%, 80%{-webkit-transform:translateX(10px);}
+}
+@-webkit-keyframes icon-bounce{
+	0%, 100%{-webkit-transform:translateX(0);}
+ 	10%, 30%, 50%, 70%, 90%{-webkit-transform:translateX(-10px);}
+ 	20%, 40%, 60%, 80%{-webkit-transform:translateX(10px);}
+}
+@-moz-keyframes icon-bounce{
+	0%, 100%{-webkit-transform:translateX(0);}
+ 	10%, 30%, 50%, 70%, 90%{-webkit-transform:translateX(-10px);}
+ 	20%, 40%, 60%, 80%{-webkit-transform:translateX(10px);}
+}
+@-o-keyframes icon-bounce{
+	0%, 100%{-webkit-transform:translateX(0);}
+ 	10%, 30%, 50%, 70%, 90%{-webkit-transform:translateX(-10px);}
+ 	20%, 40%, 60%, 80%{-webkit-transform:translateX(10px);}
+}
+.uiYaojiang .lefttorightshake{
+	-webkit-animation:icon-bounce 1s alternate;
+	-moz-animation:icon-bounce 1s alternate;
+	-o-animation:icon-bounce 1s alternate;
+	animation:icon-bounce 1s alternate;
+}
+.uiYaojiang .cloudshake{
+	-webkit-animation:icon-bounce 30s linear infinite;
+	-moz-animation:icon-bounce 30s linear infinite;
+	-o-animation:icon-bounce 30s linear infinite;
+	animation:icon-bounce 30s linear infinite;
+}
+.uiYaojiang #leftCloud{
+	float:left; top:60px; position:absolute; left: -1px;
+}
+.uiYaojiang #rightCloud{
+	float:right;position:absolute;	top:30px;right: 1px;
+}
+.uiYaojiang #mask{
+	background-color: #000;
+	float:left;
+	opacity:0.50;
+	filter:alpha(opacity=50);
+	position: absolute;
+	left: 0;
+	top: 0 ;
+	z-index:2000000000 !important;
+}
+.uiYaojiang #close{
+	background: no-repeat;
+	webkit-border-radius:15px;
+	border-radius:15px;
+	width:30px;
+	height:30px;
+	padding-left:2px;
+	padding-right:2px;
+	color:rgb(75, 74, 74);
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 5px;
+	font-size:8px;
+	z-index: 2000000001 !important;
+}
+.uiYaojiang #joinfrend{
+	background: no-repeat;
+	webkit-border-radius:4px;
+	cursor: pointer;
+	position: absolute;
+	width:141px;
+	height:30px;
+	bottom:37px;
+	left:33px;
+	text-align:center;
+	font-size:14px;
+	z-index: 2000000001 !important;
+}

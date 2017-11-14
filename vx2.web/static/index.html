@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN" v-app="ibsapp">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="product" content="Metro UI CSS Framework">
+		<meta name="description" content="Simple responsive css framework">
+		<meta name="author" content="CSII">
+		<meta name="keywords" content="个人网银,农信银资金清算中心">
+		<link rel="shortcut icon" href="images/Favicon.ico">
+
+		<title>农信银资金清算中心</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body v-controller="MainCtrl" v-init="startupMain();">
+		<!--v-view app\loginapp-->
+		<div ui-view></div>
+		<!-- jquery引用 -->
+		<script type="text/javascript" src="lib/min/jquery-1.11.1.min.js"></script>
+		<!-- VX2 -->
+		<script type="text/javascript" src="lib/min/vx2.min.js"></script>
+		<!-- 开发模式 -->
+		<script src="lib/config.preload.js"></script>
+		</body>
+</html>

@@ -1,0 +1,148 @@
+{
+  "_exceptionFieldName" : "",
+  "_RejMsg" : "交易成功",
+  "_exceptionMessage" : "交易成功",
+  "_RejCode" : "000000",
+  "List" : [{
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "ZdTl58WlPaOf3Vca0vN",
+    "TrsDate" : "2016-11-14 11:30:30",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "1nA9xWDycytQbqX8iHe",
+    "TrsDate" : "2016-11-12 17:54:54",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "0hiXSRKHQX8GNoBHjY4",
+    "TrsDate" : "2016-11-12 17:25:55",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "3x6c6nODIZsu9mFV4fq",
+    "TrsDate" : "2016-11-12 16:40:49",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "rzKoxUtpY2tPvRF50uC",
+    "TrsDate" : "2016-11-12 15:37:14",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "WlfBuzcA8WfgdEXd6W7",
+    "TrsDate" : "2016-11-12 13:25:03",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "x09XdxqSPMpIYX9U0LD",
+    "TrsDate" : "2016-11-11 17:48:32",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "7AV5SIV4L10DyAZ4ybk",
+    "TrsDate" : "2016-11-11 17:11:56",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "bUkwyxg7lgjzBIAslLr",
+    "TrsDate" : "2016-11-11 17:11:56",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "351TtWhDtITY6mU141K",
+    "TrsDate" : "2016-11-11 16:40:51",
+    "TrsAmount" : "6222020502320392"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "7MDDzDlJVv3BZ8vImrJ",
+    "TrsDate" : "2016-11-11 16:37:07",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "kWP8azj0nS3XRbDZXng",
+    "TrsDate" : "2016-11-11 15:51:35",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "PdfZuDrZ1vep5urCxGG",
+    "TrsDate" : "2016-11-11 15:50:42",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "4gGPYRGpZIgyORfDHQ0",
+    "TrsDate" : "2016-11-11 14:34:28",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "t63Q1oq8e5VRzKieWc9",
+    "TrsDate" : "2016-11-11 14:34:20",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "retvcXotlsTXynLVHLD",
+    "TrsDate" : "2016-11-11 13:17:32",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "AQzQHeuZKNzMAIb08LX",
+    "TrsDate" : "2016-11-11 11:47:17",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "MwsMwKXlly9s6vvRS8z",
+    "TrsDate" : "2016-11-11 11:26:45",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "f9FJarAGFC0auwflMDk",
+    "TrsDate" : "2016-11-11 11:26:12",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "fk6hKiixGX3b083nLxM",
+    "TrsDate" : "2016-11-11 11:25:52",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "fRTfSS1W1y5taENcSLl",
+    "TrsDate" : "2016-11-11 11:24:05",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "DHCGcmnm316NLH3pJ96",
+    "TrsDate" : "2016-11-11 11:19:54",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "pdHP7FlAga0yh6hULOK",
+    "TrsDate" : "2016-11-11 11:12:14",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "0aubWz0vPhuh4y86wPa",
+    "TrsDate" : "2016-11-11 11:11:11",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "fN08Ktwx8IT3L5InKHd",
+    "TrsDate" : "2016-11-11 11:10:04",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "n0OiNYO0NurloUaifl6",
+    "TrsDate" : "2016-11-11 11:10:04",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "UgX1vX7pfsltcS6eaC4",
+    "TrsDate" : "2016-11-11 11:10:03",
+    "TrsAmount" : "20"
+  }, {
+    "PayeeAcNo" : "6222020502320392",
+    "TrsJnlNo" : "4qvpMFl0UCqnZL77FkZ",
+    "TrsDate" : "2016-11-11 11:10:03",
+    "TrsAmount" : "20"
+  }],
+  "_exceptionMessageCode" : "000000"
+}

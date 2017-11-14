@@ -1,0 +1,57 @@
+<div v-lazy-load="htmls/UserLogin/UserLogin.js">
+	<div v-controller="LoginCtrl" v-init="startup()">
+		<!--广告栏-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background:url(images/img1.jpg) center center no-repeat"></div>
+				<div class="swiper-slide" style="background:url(images/img3.jpg) center center no-repeat"></div>
+				<div class="swiper-slide" style="background:url(images/img3.jpg) center center no-repeat"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="login_wapper">
+				<ul>
+					<form name="loginForm" v-submit="doLogin();" novalidate>
+						<dl id="login_box">
+							<p class="codeBtn"></p>
+							<dt></dt>
+							<dd>
+								<input class="ico1" name="UserId" v-model="UserId" type="text" placeholder="用户名/手机号／证件号"  title="用户名" required >
+							</dd>
+							<dd>
+								<input class="ico2" name="Password" v-model="Password" type="password" placeholder="请输入您的密码" title="密码" required>
+							</dd>
+							<dd>
+								<input class="ico3" name="_vTokenName" v-model="_vTokenName" type="text" placeholder="请输入验证码" validate="{{ImgRandom!=null}}"  required title="验证码" maxlength=4>
+								<p class="code"></p>
+							</dd>
+							<ul>
+								<li v-click="isRememberFn();">
+									<input name="isRemember" v-model="isRemember"  type="checkbox" class="checkbox"/>
+								</li>
+								<li>
+									记住用户名
+								</li>
+								<li>
+									忘记用户名 | 忘记密码
+								</li>
+							</ul>
+							<div style="color: red;padding-left: 24px;" v-show="jsonError[0]" v-click="jsonError=[];">
+								<span v-bind="jsonError[0]._exceptionMessage"></span>
+							</div>
+							<ul>
+								<input type="submit" class="log" value="" v-disabled="loginInvalidFlag">
+								<input type="button" class="reg" value="" v-click="doRegister();">
+								<span id="loadimg" style="display: none; position: absolute; top: 10px; left: 60px; z-index: 1000;"> <img src="images/loading1.gif" width="16" height="16" /></span>
+							</ul>
+
+						</dl>
+						<dl id="login_box2">
+							<p class="PcLogBtn"></p>
+						</dl>
+					</form>
+				</ul>
+			</div>
+		</div>
+		<div class="bigimg1"></div>
+	</div>
+</div>

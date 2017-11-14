@@ -1,0 +1,121 @@
+.sideslip-menu .index_silde{
+  width: 600px;
+  height: 700px;
+}
+.sideslip-menu .fixed_btn{
+  width:100%;
+  overflow:hidden;
+  position:fixed;
+  min-height: 600px;
+  margin: 0 auto;
+  left:80px;
+  /*top:40px;*/
+  text-align:center;
+}
+.sideslip-menu .fixed_btn .fixed_btn01{
+  margin-left:20px;
+  float:left;
+}
+.sideslip-menu .fixed_btn .fixed_btn02{
+
+  float:right;
+}
+.sideslip-menu .fixed_btn {
+    /*top: 20px;*/
+    z-index: 3;
+}
+
+.sideslip-menu .login_btn {
+    font-size: 14px;
+    color: #333;
+}
+.sideslip-menu .logiin_box,.myinfor_box{
+  width:86%;
+  height:100%;
+  border-right:1px solid #e5e5e5;
+  background:#fff;
+  position:fixed;
+  top:52px;
+  left:44px;
+  overflow-y:scroll;
+}
+.sideslip-menu .logiin_box div{
+  width:78%;
+  left:44px;
+  margin:20px auto;
+  line-height:36px;
+}
+.sideslip-menu .logiin_box div span{
+  font-size:16px;
+  line-height:24px;
+}
+.sideslip-menu .logiin_box div input[type="text"]{
+  width:70%;
+  border:none;
+  border-bottom:1px solid #dadada;
+  line-height:24px;
+  font-size:16px;
+}
+.sideslip-menu .logiin_box div input[type="text"] {
+    width: 65%;
+    border: none;
+    border-bottom: 1px solid #dadada;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.sideslip-menu .logiin_box .loginMT {
+    margin-top: 60px;
+}
+
+@media (max-height: 480px) {
+    .logiin_box .loginMT {
+        margin-top: 20px;
+    }
+    .logiin_box div {
+        width: 78%;
+        margin: 14px auto;
+        line-height: 36px;
+    }
+}
+.sideslip-menu .loginExtra {
+    height: 100%;
+    z-index: 6;
+    display: block;
+    left: -100%;
+}
+.sideslip-menu .btn02_box{
+  text-align:center;
+  margin:20px 8%;
+}
+.sideslip-menu .btn02{
+  width:100%;
+  line-height:40px;
+  border:none;
+  border-radius:20px;
+  background:#e64036;
+  color:#fff;
+  font-size:15px;
+}
+.sideslip-menu .btn03{
+  width:100%;
+  line-height:40px;
+  border:1px solid #e64036;
+  border-radius:20px;
+  color:#e64036;
+  font-size:15px;
+}
+.sideslip-menu .margintop{
+  margin-top:10px;
+}
+/******弹框 begin*******/
+.sideslip-menu .eee-mask {
+  position: fixed;
+  z-index: 5;
+  top: 52px;
+  left: 44px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}

@@ -1,0 +1,54 @@
+{
+  "_RejCode": "000000",
+  "List": [
+    {
+      "PayeeAcNo": "7829317893791",
+      "PayeeAcName": "中国移动",
+      "Amount": "32.31",
+      "FundUsage": "",
+      "PayeeBank": "科蓝银行",
+      "TrsDate": "2016-10-28",
+      "Crtsam": "32.31",
+      "Remark": "",
+      "TranBr": "0036",
+      "TrsTime": "12:33:22",
+      "TxnDrcr": "0",
+      "Balance": "8989.99",
+      "Drtsam": "32.31"
+    },
+    {
+      "PayeeAcNo": "7829317893791",
+      "PayeeAcName": "中国移动",
+      "Amount": "32.31",
+      "FundUsage": "",
+      "PayeeBank": "科蓝银行",
+      "TrsDate": "2016-10-28",
+      "Crtsam": "32.31",
+      "Remark": "",
+      "TranBr": "0036",
+      "TrsTime": "12:33:22",
+      "TxnDrcr": "0",
+      "Balance": "8989.99",
+      "Drtsam": "32.31"
+    },
+    {
+      "PayeeAcNo": "7829317893791",
+      "PayeeAcName": "中国移动",
+      "Amount": "32.31",
+      "FundUsage": "",
+      "PayeeBank": "科蓝银行",
+      "TrsDate": "2016-10-28",
+      "Crtsam": "32.31",
+      "Remark": "",
+      "TranBr": "0036",
+      "TrsTime": "12:33:22",
+      "TxnDrcr": "0",
+      "Balance": "8989.99",
+      "Drtsam": "32.31"
+    }
+  ],
+  "_exceptionFieldName": "",
+  "_exceptionMessageCode": "000000",
+  "_RejMsg": "交易成功",
+  "_exceptionMessage": "交易成功"
+}

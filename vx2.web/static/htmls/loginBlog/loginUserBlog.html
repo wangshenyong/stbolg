@@ -1,0 +1,25 @@
+<div v-lazy-load="htmls/loginBlog/loginUserBlogCtrl.js">
+	<div v-controller="loginUserBlogCtrl">
+		<div id="logincontainer">
+    	<div id="loginbox">
+        	<div id="loginheader">
+            	<img src="/css/img/blue/img/cp_logo_login.png" alt="Control Panel Login" />
+            </div>
+            <div id="innerlogin">
+            	<form name="blogLogin" v-submit="" active="#" novalidate >
+                	<p>你的用户名</p>
+                	<input type="text" class="logininput" name="user" v-model="user" title="用户名" pattern="[\d]{6,19}" required/>
+                    <p>你的密码</p>
+                	<input type="password" class="logininput"  name="password" title="密码" v-model="password" pattern="[\d]{6,19}" required/>
+                   
+                   	<input type="submit" class="loginbtn" value="提交" /><br />
+                    <p><a href="#" title="忘记密码?">忘记密码?</a></p>
+                    <div v-show="jsonError[0]" v-click="jsonError[0] = null" style="margin-top:5px;color:red;"><a href="#" title="错误提示" style="color:red;">{{jsonError[0]._exceptionMessage}}</a></div>
+                </form>
+            </div>
+        </div>
+        <img src="/css/img/img/login_fade.png" alt="Fade" />
+    </div>
+		
+	</div>
+</div>

@@ -1,0 +1,24 @@
+<!--头部-->
+<div class="header2">
+	<ul>
+		<li>
+			<div>预留信息：<span>一米阳光</span><a class="setup">设置</a></div>
+			<a v-click="logout()">退出网银</a>
+		</li>
+	</ul>
+</div>
+<div class="logoBox">
+	<ul>
+		<li>
+			<div class="sel_input">
+				<input type="text" placeholder="请输入检索关键字" id="searchx" v-focus="searchWord=undefined"
+				       autocomplete="off"
+				       typeahead="state.Title for state in ajaxSearch($viewValue)"
+				       typeahead-on-select="selectCall($item)"
+				       v-model="searchWord">
+			</div>
+		</li>
+		<li><a></a></li>
+	</ul>
+</div>
+<div ui-menu2="$menuList" item-select="selectItem($item)"></div>

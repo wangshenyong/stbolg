@@ -1,0 +1,121 @@
+<form name="preForm" v-submit="submitPre()" novalidate v-init="initPre()">
+	<fieldset class="grid">
+		<div class="row no-margin-top">
+			<div class="example form-style span5">
+				<legend>
+					付款方信息
+				</legend>
+				<label>付款账号:</label>
+
+				<div class="input-control select" data-role="input-control">
+					<select>
+						<option>6226 2201 8888 8888 / 工资卡</option>
+					</select>
+				</div>
+				<label>币种:</label>
+
+				<div class="input-control select" data-role="input-control">
+					<select>
+						<option>人民币</option>
+						<option>美元</option>
+					</select>
+				</div>
+				<label>转账金额:</label>
+
+				<div class="input-control text" data-role="input-control">
+					<input type="text" placeholder="type text" value="110">
+					<button class="btn-clear" tabindex="-1" type="button"></button>
+				</div>
+			</div>
+			<div class="example form-style span5">
+				<legend>
+					收款方信息
+				</legend>
+				<label>选择录入方式:</label>
+
+				<div class="input-control inline-block" data-role="input-control">
+					<label>
+						<input type="radio" name="inType" v-model="inType" value="optionMode"  checked>
+						<span class="check"></span> 选择收款方 </label>
+				</div>
+				<div class="input-control inline-block" data-role="input-control">
+					<label>
+						<input type="radio" name="inType" v-model="inType" value="textMode">
+						<span class="check"></span> 录入收款方 </label>
+				</div>
+				<label v-show="entryMode()">收款帐号:</label>
+
+				<div class="input-control select" data-role="input-control" v-show="entryMode()">
+					<select>
+						<option>6226 2201 8888 8888 / 工资卡</option>
+						<option>6226 2201 6666 8888 / 福利卡</option>
+					</select>
+				</div>
+				<label v-hide="entryMode()">收款账户名称:</label>
+				<div class="input-control text" v-hide="entryMode()">
+					<input type="text" placeholder="收款账户名称" >
+					<button class="btn-clear" tabindex="-1" type="button"></button>
+
+				</div>
+				<label v-hide="entryMode()">收款账号:</label>
+				<div class="input-control text" v-hide="entryMode()">
+					<input type="text" placeholder="收款账号" >
+					<button class="btn-clear" tabindex="-1" type="button"></button>
+
+				</div>
+				<label>收款人手机号:</label>
+
+				<div class="input-control text" data-role="input-control" v-show="entryMode()">
+					<input type="text" placeholder="收款人手机号" value="15222625773">
+					<button class="btn-clear" tabindex="-1" type="button"></button>
+				</div>
+				<div class="input-control text" data-role="input-control" v-hide="entryMode()">
+					<input type="text" placeholder="收款人手机号" value="">
+					<button class="btn-clear" tabindex="-1" type="button"></button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="example span10">
+				<legend>
+					其他
+				</legend>
+				<!--<div class="row">-->
+				<!--<label class="nowrap span1" style="display: inline">汇路:</label><span class="nowrap span6"
+				title="支持5万元（含）以下，7×24小时可操作，实时到账。手续费暂免。">说明：支持5万元（含）以下，7×24小时可操作，实时到账。手续费暂免。</span>-->
+				<label>用途:</label>
+
+				<div class="input-control select" data-role="input-control">
+					<select>
+						<option>网银转账</option>
+						<option>工资奖金</option>
+						<option>往来结算款</option>
+						<option>差旅费</option>
+						<option>租赁费</option>
+					</select>
+				</div>
+				<label>处理方式:</label>
+
+				<div class="input-control default-style inline-block" data-role="input-control">
+					<label>
+						<input type="radio" name="optStyle" v-model="optStyle" value="immediate" checked>
+						<span class="check"></span> 立即执行 </label>
+				</div>
+				<div class="input-control default-style inline-block" data-role="input-control">
+					<label>
+						<input type="radio" name="optStyle" v-model="optStyle" value="appointment">
+						<span class="check"></span> 预约日期执行 </label>
+				</div>
+				<label v-hide="transMode()">付款日期:</label>
+				<div class="input-control text" data-role="input-control" v-hide="transMode()">
+					<input type="text" placeholder="付款日期" ui-calendar='{"minView":1,"autoclose": true,"format": "yyyy-mm-dd hh"}'/>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<button class="span5 button success" type="submit">
+				下一步
+			</button>
+		</div>
+	</fieldset>
+</form>

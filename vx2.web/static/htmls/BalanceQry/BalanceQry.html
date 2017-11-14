@@ -1,0 +1,96 @@
+<div class="bgGray" v-lazy-load="htmls/BalanceQry/BalanceQry.js">
+	<div class="wrap" >
+		<div v-controller="BalanceQryCtrl" v-init="startup()">
+			<div class="leftMenu"><!--左侧-->
+				<div class="box">
+					<h2 class="titLine">生活服务</h2>
+					<ul class="lifeService">
+						<li><a v-click="goto('/AccountDetail')">交易明细查询<i>&gt;</i></a></li>
+						<li class="on"><a v-click="goto('/BalanceQry')">余额查询<i>&gt;</i></a></li>
+						<li><a v-click="goto('/MobileRecharge')">话费充值<i>&gt;</i></a></li>
+						<li><a>水费<i>&gt;</i></a></li>
+						<li><a>电费<i>&gt;</i></a></li>
+						<li><a>煤气费<i>&gt;</i></a></li>
+						<li><a>取暖费<i>&gt;</i></a></li>
+						<li><a v-click="goto('/MobileRechargeOrdQry')">缴费记录查询<i>&gt;</i></a></li>
+						<li><a>更多<i>&gt;</i></a></li>
+					</ul>
+				</div>
+				<div class="h10"></div>
+				<div class="box fastMenu">
+					<h2 class="titLine">生活服务</h2>
+					<a><img src="images/icon1.png"></a>
+					<a><img src="images/icon2.png"></a>
+					<a><img src="images/icon3.png"></a>
+					<a><img src="images/icon4.png"></a>
+					<a><img src="images/icon5.png"></a>
+					<a><img src="images/icon6.png"></a>
+					<a><img src="images/icon7.png"></a>
+				</div>
+				<div class="h10"></div>
+				<div class="box fastMenu">
+					<h2 class="titLine">最近公告</h2>
+
+					<p class="center"><img src="images/public.jpg"></p>
+				</div>
+			</div>
+			<div class="rightCont">
+				<div class="charge">
+					<h2>余额查询</h2>
+					<table class="tabList">
+						<tbody>
+						<tr>
+							<td class="tit">查询账户</td>
+							<td>
+								<select class="sel" name="Acc" v-model="Acc"
+								        v-options="row.AcNo|accountNoFilter for row in AccList">
+								</select>
+							</td>
+						</tr>
+						<!--"OpenDate": "2016-10-28 12:12:01",-->
+						<!--"UseableBalance": "7890.11",-->
+						<!--"MaturityDate": "20171027",-->
+						<!--"OpenOrgId": "909",-->
+						<!--"BeginDate": "20161028",-->
+						<!--"Interest": "12.32",-->
+						<!--"SubAcNo": "663789891239001",-->
+						<!--"TermCd": "12",-->
+						<!--"Currency": "CNY",-->
+						<!--"OpenBankName": "科蓝银行朝阳门支行",-->
+						<!--"SubAcState": "N",-->
+						<!--"AutoDtg": "Y",-->
+						<!--"CashFlag": "C",-->
+						<!--"InterestRate": "1.89",-->
+						<!--"Balance": "7894.33",-->
+						<!--"SubAcType": "A"-->
+						<tr>
+							<td class="tit">子账户号</td>
+							<td><em>{{result.SubAcNo|accountNoFilter}}</em></td>
+						</tr>
+						<tr>
+							<td class="tit">开户行</td>
+							<td>{{result.OpenBankName}}</td>
+						</tr>
+						<tr>
+							<td class="tit">有效余额</td>
+							<td class="red"><em>{{result.Balance+'元'}}</em></td>
+						</tr>
+						<tr>
+							<td class="tit">可用余额</td>
+							<td class="red"><em>{{result.UseableBalance+'元'}}</em></td>
+						</tr>
+						<tr>
+							<td class="tit"> 货币种类</td>
+							<td>{{$msg('Currency')[result.Currency]}}</td>
+						</tr>
+						<tr>
+							<td class="tit"> 炒汇标志</td>
+							<td>{{$msg('CashFlag')[result.CashFlag]}}</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

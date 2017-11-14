@@ -1,0 +1,44 @@
+<!--可直接从美工拷贝过来-->
+<form name="preForm" class="form-horizontal" v-submit="doPre();" novalidate>
+	<div class="grid">
+		<div class="row">
+			<label class="span4 text-right">转出账号:</label>
+			<div class="span5 input-control">
+				<select name="AccNo" v-model="AccNo"
+				v-options="row.No+'/'+row.AccName for row in AccList">
+					<option value="">-请选择-</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<label class="span4 text-right">转入账号:</label>
+			<div class="span5 input-control">
+				<input name="PayeeAccNo" v-model="PayeeAccNo" required />
+			</div>
+		</div>
+		<div class="row">
+			<label class="span4 text-right">金额:</label>
+			<div class="span5 input-control">
+				<input type="text" name="Amount" v-model="Amount" ui-amount="ChineseCashPay" required />
+				xxx:{{ChineseCashPay}}
+			</div>
+		</div>
+		<div class="row">
+			<label class="span4 text-right">日期:</label>
+			<div class="span5 input-control">
+				<input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" v-model="dataTransfer" is-open="opened" 
+					datepicker-options="{formatYear: 'yy',startingDay: 1,class: 'datepicker'}" v-required="true" close-text="Close">
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default" v-click="$event.preventDefault();$event.stopPropagation();;opened = true;">
+						<i class="glyphicon glyphicon-calendar"></i>
+					</button> </span>
+			</div>
+		</div>
+		<div class="row">
+			<label class="span4 text-right">
+				<input type="submit" value="提交" />
+				<input type="button" v-click="doOther()" value="Other"/>
+			</label>
+		</div>
+	</div>
+</form>

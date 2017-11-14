@@ -1,0 +1,39 @@
+{
+  "_exceptionFieldName": "",
+  "_RejMsg": "",
+  "_exceptionMessage": "",
+  "_RejCode": "0000000",
+  "List": [
+    {
+      "prodtPrcStatsCd": "01",
+      "applnBrchCd": "100",
+      "prodtPrcEfTm": "20161110",
+      "creTm": "20161110",
+      "prodtDsclrTlstPrc": 100,
+      "creBrchCd": "100",
+      "prodtPrcUnits": "CNY",
+      "prodtPrcDesc": "100",
+      "prodtBasPrcTypCd": "200",
+      "prodtDsclrLowPrc": 99,
+      "prodtCd": "100",
+      "creOprtPsnlId": "100",
+      "prodtPrcTypCd": "100"
+    },
+    {
+      "prodtPrcStatsCd": "01",
+      "applnBrchCd": "200",
+      "prodtPrcEfTm": "20161110",
+      "creTm": "20161110",
+      "prodtDsclrTlstPrc": 200,
+      "creBrchCd": "200",
+      "prodtPrcUnits": "CNY",
+      "prodtPrcDesc": "200",
+      "prodtBasPrcTypCd": "200",
+      "prodtDsclrLowPrc": 197,
+      "prodtCd": "200",
+      "creOprtPsnlId": "200",
+      "prodtPrcTypCd": "200"
+    }
+  ],
+  "_exceptionMessageCode": "0000000"
+}

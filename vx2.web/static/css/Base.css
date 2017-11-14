@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----------------------------------// 全局样式 //-----------------------------------*/
+body,textarea,input,option{font-size:12px;font-family:'Microsoft YaHei',宋体,arial; background:#fff;}
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,textarea,input,select,form{margin:0}
+th,td,ul,ol,textarea,input{padding:0;}
+a{text-decoration:none}
+a:link{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+table{border-collapse:collapse}
+li{list-style:none}
+img{border:none}
+img,label,input{vertical-align:middle}
+textarea,a,input{outline:none}
+textarea{overflow:auto;resize:none}
+.clear:after{content:'';display:block;clear:both}
+.clear{zoom:1}
+
+input::-webkit-input-placeholder { color: #908f8f !important;}
+input:-moz-placeholder { color: #908f8f !important;}
+input::-moz-placeholder { color: #908f8f !important;}
+input:-ms-input-placeholder { color: #908f8f !important;}
+
+.left{ float:left;}
+.right{ float:right;}
+.h5{ height:5px; clear:both; font-size:0px;}
+.h8{ height:8px; clear:both; font-size:0px;}
+.h10{ height:10px; clear:both; font-size:0px;}
+.red { color:#cc0000;}
+.blue { color:#0075c1;}
+.black { color:#333;}
+.green { color:#2a911f;}
+.orge { color:#d05d00;}

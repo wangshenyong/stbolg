@@ -1,0 +1,44 @@
+{
+  "IsHuiDu": 0,
+  "_exceptionFieldName": "",
+  "FaRenId": "FAREN00001",
+  "_RejMsg": "交易成功",
+  "_exceptionMessage": "交易成功",
+  "_RejCode": "000000",
+  "Apps": [
+    {
+      "Type": "H",
+      "IsLogin": "0",
+      "Title": "手机充值",
+      "PcActionId": "MobileRecharge",
+      "ImageUrl": "/iap/useruploads/iap/1478576523364481664.png",
+      "Id": 7,
+      "Url": "http://www.csii.com.cn/",
+      "ClassifyList": "[{\"Id\":2}]",
+      "Created": "1970-01-18 10:42:56"
+    },
+    {
+      "Type": "H",
+      "IsLogin": "0",
+      "Title": "账户绑定",
+      "PcActionId": "AccountBind",
+      "ImageUrl": "/iap/useruploads/iap/1478576523364481664.png",
+      "Id": 7,
+      "Url": "http://www.csii.com.cn/",
+      "ClassifyList": "[{\"Id\":2}]",
+      "Created": "1970-01-18 10:42:56"
+    },
+    {
+      "Type": "H",
+      "IsLogin": "0",
+      "Title": "账户明细",
+      "PcActionId": "AccountDetail",
+      "ImageUrl": "/iap/useruploads/iap/1478576523364481664.png",
+      "Id": 7,
+      "Url": "http://www.csii.com.cn/",
+      "ClassifyList": "[{\"Id\":2}]",
+      "Created": "1970-01-18 10:42:56"
+    }
+  ],
+  "_exceptionMessageCode": "000000"
+}

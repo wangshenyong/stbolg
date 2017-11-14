@@ -1,0 +1,135 @@
+<div class="bgGray" v-lazy-load="htmls/AccountBind/AccountBind.js">
+	<div class="wrap">
+		<div class="leftMenu"><!--左侧-->
+			<div class="box">
+				<h2 class="titLine">生活服务</h2>
+				<ul class="lifeService">
+					<li class="on"><a v-click="goto('/app/AccountBind')">账号绑定<i>&gt;</i></a></li>
+					<li><a v-click="goto('/app/MobileRecharge')">手机充值<i>&gt;</i></a></li>
+					<li><a>水费<i>&gt;</i></a></li>
+					<li><a>电费<i>&gt;</i></a></li>
+					<li><a>煤气费<i>&gt;</i></a></li>
+					<li><a>取暖费<i>&gt;</i></a></li>
+					<li><a>缴费记录查询<i>&gt;</i></a></li>
+					<li><a>更多<i>&gt;</i></a></li>
+				</ul>
+			</div>
+			<div class="h10"></div>
+			<div class="box fastMenu">
+				<h2 class="titLine">生活服务</h2>
+				<a><img src="images/icon1.png"></a>
+				<a><img src="images/icon2.png"></a>
+				<a><img src="images/icon3.png"></a>
+				<a><img src="images/icon4.png"></a>
+				<a><img src="images/icon5.png"></a>
+				<a><img src="images/icon6.png"></a>
+				<a><img src="images/icon7.png"></a>
+			</div>
+			<div class="h10"></div>
+			<div class="box fastMenu">
+				<h2 class="titLine">最近公告</h2>
+
+				<p class="center"><img src="images/public.jpg"></p>
+			</div>
+		</div>
+		<div v-controller="AccountBindCtrl" v-init="startup()">
+			<div class="rightCont" v-page>
+				<form name="formPre" v-submit="submitPre()" novalidate>
+					<div class="charge">
+						<h2>账号绑定</h2>
+						<table class="tabList">
+							<tbody>
+							<tr>
+								<td class="tit"><em class="red">*</em> 绑定卡号:</td>
+								<td>
+									<input class="inpt" type="text" name="AcNo" v-model="AcNo"
+									       required>
+								</td>
+							</tr>
+							<tr>
+								<td class="tit"><em class="red">*</em> 客户号:</td>
+								<td>
+									<input class="inpt" type="text" name="CustNo" v-model="CustNo"
+									       required>
+								</td>
+							</tr>
+							<tr>
+								<td class="tit"><em class="red">*</em> 绑定渠道:</td>
+								<td v-init="BindChannelId='web'">
+									<select class="sel" name="BindChannelId" v-model="BindChannelId" required>
+										<option value="web">PC</option>
+										<option value="mobile">Mobile</option>
+										<option value="ipad">iPad</option>
+									</select>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						<div class="btnboxs">
+							<input type="submit" value="下一步"/>
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="rightCont" v-page>
+
+				<form name="formCom" v-submit="submit()" novalidate>
+					<div class="charge">
+						<h2>账号绑定</h2>
+						<table class="tabList">
+							<tbody>
+							<tr>
+								<td class="tit">绑定卡号:</td>
+								<td><em><span class="red">{{confirmData.AcNo|accountNoFilter}}</span> </em></td>
+							</tr>
+							<tr>
+								<td class="tit">客户号:</td>
+								<td><em>{{confirmData.CustNo}}</em></td>
+							</tr>
+							<tr>
+								<td class="tit">绑定渠道:</td>
+								<td><em>{{confirmData.BindChannelId}}</em></td>
+							</tr>
+							</tbody>
+						</table>
+						<div class="btnboxs">
+							<input type="submit" value="下一步"/>
+							<input type="button" value="返回" class="back" v-click="goto('#1')"/>
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="rightCont" v-page>
+				<div class="charge">
+					<h2>账号绑定</h2>
+					<table class="tabList result">
+						<tbody>
+						<tr>
+							<td colspan="4" align="center"><img src="images/ok.jpg"></td>
+						</tr>
+						<tr>
+							<td class="tit">绑定卡号:</td>
+							<td><em><span class="red">{{result.AcNo|accountNoFilter}}</span> </em></td>
+						</tr>
+						<tr>
+							<td class="tit">客户号:</td>
+							<td><em>{{result.CustNo}}</em></td>
+						</tr>
+						<tr>
+							<td class="tit">绑定渠道:</td>
+							<td><em>{{result.BindChannelId}}</em></td>
+						</tr>
+						</tbody>
+					</table>
+					<div class="btnboxs">
+						<input type="button" value="返回" class="back" v-click="goto('#0')"/>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+

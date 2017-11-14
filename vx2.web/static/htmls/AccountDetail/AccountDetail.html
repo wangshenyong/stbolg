@@ -1,0 +1,141 @@
+<div v-lazy-load="htmls/AccountDetail/AccountDetailCtrl.js">
+	<div class="bgGray" v-controller="AccountDetailCtrl" v-init="start()">
+		<div class="wrap">
+			<div class="leftMenu"><!--左侧-->
+				<div class="box">
+					<h2 class="titLine">生活服务</h2>
+					<ul class="lifeService">
+						<li class="on"><a v-click="goto('/AccountDetail')">交易明细查询<i>&gt;</i></a></li>
+						<li><a v-click="goto('/BalanceQry')">余额查询<i>&gt;</i></a></li>
+						<li><a v-click="goto('/MobileRecharge')">话费充值<i>&gt;</i></a></li>
+						<li><a>水费<i>&gt;</i></a></li>
+						<li><a>电费<i>&gt;</i></a></li>
+						<li><a>煤气费<i>&gt;</i></a></li>
+						<li><a>取暖费<i>&gt;</i></a></li>
+						<li><a v-click="goto('/MobileRechargeOrdQry')">缴费记录查询<i>&gt;</i></a></li>
+						<li><a>更多<i>&gt;</i></a></li>
+					</ul>
+				</div>
+				<div class="h10"></div>
+				<div class="box fastMenu">
+					<h2 class="titLine">生活服务</h2>
+					<a><img src="images/icon1.png"></a>
+					<a><img src="images/icon2.png"></a>
+					<a><img src="images/icon3.png"></a>
+					<a><img src="images/icon4.png"></a>
+					<a><img src="images/icon5.png"></a>
+					<a><img src="images/icon6.png"></a>
+					<a><img src="images/icon7.png"></a>
+				</div>
+				<div class="h10"></div>
+				<div class="box fastMenu">
+					<h2 class="titLine">最近公告</h2>
+
+					<p class="center"><img src="images/public.jpg"></p>
+				</div>
+			</div><!--左侧End-->
+			<div class="rightCont"><!--右侧-->
+				<div class="charge">
+					<h2>交易明细查询</h2>
+					<table class="tabList result">
+						<tbody>
+						<tr>
+							<td class="tit"><em class="red">*</em> 账户列表</td>
+							<td>
+								<select class="sel" name="Acc" v-model="Acc"
+								        v-options="row.AcNo|accountNoFilter for row in AccList">
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="tit"><em class="red">*</em> 币种</td>
+							<td>
+								<select class="sel">
+									<option>人民币</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="tit"><em class="red">*</em> 起止日期</td>
+							<td>
+								<input class="date" type="text" name="BeginDate" v-model="BeginDate">
+								——
+								<input class=" input-append date" type="text" name="EndDate" v-model="EndDate">
+								<span class="opt">
+								<a class="blue" href="" v-click="selectDate($event,'-1M')">近一个月</a>
+								<a class="blue" href="" v-click="selectDate($event,'-3M')">近三个月</a>
+								<a class="blue" href="" v-click="selectDate($event,'-6M')">近半年</a>
+							</span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					<p class="btns"><a v-click="AccDetailQry()"><img src="images/btnSearch.png"></a></p>
+
+					<div v-show="DetailList&&DetailList.length>0">
+						<table class="searchList mt30">
+							<tbody>
+							<tr>
+								<th>交易时间</th>
+								<th>收入</th>
+								<th>支出</th>
+								<th>账户余额</th>
+								<th>对方账号</th>
+								<th>对方户名</th>
+								<th>交易机构</th>
+								<th>摘要</th>
+							</tr>
+							<!--"PayeeAcNo": "7829317893791",-->
+							<!--"PayeeAcName": "中国移动",-->
+							<!--"Amount": "32.31",-->
+							<!--"FundUsage": "",-->
+							<!--"PayeeBank": "科蓝银行",-->
+							<!--"TrsDate": "2016-10-28",-->
+							<!--"Crtsam": "32.31",-->
+							<!--"Remark": "",-->
+							<!--"TranBr": "0036",-->
+							<!--"TrsTime": "12:33:22",-->
+							<!--"TxnDrcr": "0",-->
+							<!--"Balance": "8989.99",-->
+							<!--"Drtsam": "32.31"-->
+							<tr class="bgBlue" v-repeat="row in DetailList">
+								<td><p>{{row.TrsDate}}</p><span>{{row.TrsTime}}</span></td>
+								<td class="red">{{row.Amount}}</td>
+								<td>_ _</td>
+								<td>{{row.Balance|number:2}}</td>
+								<td>{{row.PayeeAcNo|accountNoFilter}}</td>
+								<td>{{row.PayeeAcName}}</td>
+								<td>{{row.PayeeBank}}</td>
+								<td>{{row.Remark}}</td>
+							</tr>
+							</tbody>
+						</table>
+						<div class="pages">
+							<a href="#">首页</a>
+							<a href="#">&lt; 上一页</a>
+							<a class="act" href="#">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							...
+							<a href="#">8</a>
+							<a href="#">下一页 &gt;</a>
+							<a href="#">尾页</a>
+							第1页/共8页 总计56条 跳转到：
+							<input class="jump" type="text">
+							<input class="go" type="button" value="GO">
+						</div>
+						<p class="total">当前页面收支金额合计：人民币 支出：<span class="green">211,212.12</span>元，收入：<span class="red">600,000.00</span>元
+						</p>
+
+						<p class="total">筛选条件下收支金额合计：人民币 支出：<span class="green">9,212.12</span>元，收入：<span
+								class="red">47,900.00</span>元</p>
+
+						<p class="mt30 alignC"><a href="#"><img src="images/btnDownload.png"></a></p>
+					</div>
+
+				</div>
+				<img class="mt30" src="images/hint.png">
+			</div><!--右侧End-->
+		</div>
+	</div>
+</div>

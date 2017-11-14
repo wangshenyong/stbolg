@@ -1,0 +1,187 @@
+<div v-lazy-load="htmls/UserRegister/UserRegisterCtrl.js">
+	<div v-controller="UserRegisterCtrl" v-init="startup();">
+		<div v-page>
+			<form name="userRegPre" v-submit="UserRegisterPre()" novalidate>
+				<div class="regBox">
+					<h1>注册</h1>
+					<p class="set1"></p>
+					<table>
+						<tr>
+							<td class="title"><span>*</span>登录名</td>
+							<td>
+								<input class="ctrl inpt" name="UserId" v-model="UserId" type="text"
+								       v-pattern="/^[A-z]\w+$/" placeholder="请输入登录名"
+								       required>
+
+								<p class="error">
+									<span>必输,以字母开头的字母、下划线、数字组成！</span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="title"><span>*</span>姓名</td>
+							<td>
+								<input class="ctrl inpt" name="Username" v-model="Username"
+								       v-pattern="/^[\u4E00-\u9FCC]+$/"
+								       type="text" placeholder="请输入姓名"
+								       required>
+
+								<p class="error">
+									请您填写真实有效的中文姓名！
+								</p></td>
+						</tr>
+						<tr>
+							<td class="title"><span>*</span>证件类型</td>
+							<td v-init="crtType='00'">
+								<select class="ctrl sel" name="crtType" v-model="crtType"
+								        v-options="key as value for (key,value) in $msg('idCard')">
+								</select>
+
+								<p class="error">
+									证件类型必输!
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="title"><span>*</span>证件号码</td>
+							<td>
+								<input class="ctrl inpt" name="ctNo" v-model="ctNo" type="text"
+								       placeholder="请输入证件号码"
+								       v-pattern="/\d+/"
+								       required>
+
+								<p class="error">
+									请您填写真实有效的证件号码!
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="title"><span>*</span>手机号码</td>
+							<td>
+								<input class="ctrl inpt" name="CtPhoneNo" v-model="CtPhoneNo" type="text"
+								       v-pattern="/^1[34578]\d{9}$/"
+								       placeholder="请输入手机号码" required>
+
+								<p class="error">
+									请您填写真实有效的手机号码!
+								</p>
+							</td>
+						</tr>
+					</table>
+					<div class="btnboxs">
+						<input type="submit" value="下一步">
+						<input type="button" value="返回" class="back" v-click="goto('#1')">
+					</div>
+				</div>
+			</form>
+			<dl class="wxBox">
+				<dt>
+					温馨提示
+				</dt>
+				<dd>
+					1、尊敬的客户，我行已统一电子银行（网上银行、手机银行）登录密码：若您已经开通网上银行或者手机银行其中一个，开通另一渠道时无需设置登录密码，登录密码与已开通的渠道密码相同。
+				</dd>
+				<dd>
+					2、若您从未开通网上银行或者手机银行，则新设置的电子银行密码即为网上银行、手机银行登录密码。
+				</dd>
+			</dl>
+		</div>
+		<div v-page>
+			<form name="UserRegCom" v-submit="UserRegister()" novalidate>
+				<div class="regBox">
+					<h1>注册</h1>
+
+					<p class="set2"></p>
+					<table>
+						<tr>
+							<td class="title"><span>*</span>手机号</td>
+							<td>{{CtPhoneNo}}</td>
+						</tr>
+						<tr>
+							<td class="title"><span>*</span>登录密码</td>
+							<td><input class="ctrl inpt" name="password" type="password" placeholder="请输入登录密码"
+							           v-model="password"
+							           required>
+
+								<p class="error">
+									必输!
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="title"><span>*</span>确认登录密码</td>
+							<td><input class="ctrl inpt" name="password2" v-model="password2" type="password"
+							           placeholder="请输入登录密码"
+							           required>
+
+								<p class="error" style="color:red" v-show="password!=password2">
+									两次登录密码不一致!
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="title"><span>*</span>手机验证码</td>
+							<td><input name="verifyCode" v-model="verifyCode" required type="text"
+							           placeholder="请输入手机验证码" class="yzm inpt">
+								<input type="button" value="获取验证码" style="box-shadow: 0 5px 10px rgba(0, 0, 0, .2)"
+								       ui-timebtn='{"time":10,"callback":"clickToGetSMS"}'>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="check">
+								<input name="agreeMent" v-model="agreeMent" type="checkbox" required
+								       class="checkbox"/>已阅读并同意《北京农业银行网上银行个人客户服务协议书》
+							</td>
+						</tr>
+					</table>
+					<div class="btnboxs">
+						<input type="submit" value="下一步">
+						<input type="button" value="返回" class="back" v-click="goto('#1')">
+					</div>
+				</div>
+			</form>
+
+			<dl class="wxBox">
+				<dt>温馨提示</dt>
+				<dd>1、尊敬的客户，我行已统一电子银行（网上银行、手机银行）登录密码：若您已经开通网上银行或者手机银行其中一个，开通另一渠道时无需设置登录密码，登录密码与已开通的渠道密码相同。</dd>
+				<dd>2、若您从未开通网上银行或者手机银行，则新设置的电子银行密码即为网上银行、手机银行登录密码。</dd>
+			</dl>
+		</div>
+		<div v-page>
+			<div class="regBox">
+				<h1>注册</h1>
+
+				<p class="set3"></p>
+				<table>
+					<tr>
+						<td colspan="4" class="sucBox"><img src="images/ico5.png"></td>
+					</tr>
+					<tr>
+						<td class="title2">登录账号</td>
+						<td>{{result.UserId}}</td>
+						<td class="title2">姓名</td>
+						<td>{{result.Username}}</td>
+
+					</tr>
+					<tr>
+						<td class="title2">证件类型</td>
+						<td>{{ $msg('idCard')[result.crtType]}}</td>
+						<td class="title2">证件号码</td>
+						<td>{{result.ctNo}}</td>
+					</tr>
+					<tr>
+						<td class="title2">手机号</td>
+						<td>{{result.CtPhoneNo}}</td>
+					</tr>
+				</table>
+				<div class="btnbox"><input type="button" value="完成" v-click="goto('/UserLogin')"></div>
+			</div>
+
+			<dl class="wxBox">
+				<dt>温馨提示</dt>
+				<dd>1、尊敬的客户，我行已统一电子银行（网上银行、手机银行）登录密码：若您已经开通网上银行或者手机银行其中一个，开通另一渠道时无需设置登录密码，登录密码与已开通的渠道密码相同。</dd>
+				<dd>2、若您从未开通网上银行或者手机银行，则新设置的电子银行密码即为网上银行、手机银行登录密码。</dd>
+			</dl>
+		</div>
+	</div>
+</div>

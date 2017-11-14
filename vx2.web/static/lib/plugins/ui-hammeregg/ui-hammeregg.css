@@ -1,0 +1,94 @@
+﻿/*砸金蛋 开始*/
+div[ui-hammeregg]{
+    position: relative;
+    width: 874px;
+    left: -14px;
+    height: 465px;
+}
+.hammerEgg {
+    width: 1160px;
+    margin: 0 auto;
+    background-color: orange;
+    position: relative;
+}
+.hammerEgg .hammer {
+    width: 136px;
+    height: 200px;
+    background: url(img/hammer.png) no-repeat;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+.hammerEgg .eggList {
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+}
+.hammerEgg .egg {
+    width: 350px;
+    height: 465px;
+    background: url(img/egg.png) no-repeat;
+    background-position: center center;
+    float: left;
+    position: relative;
+}
+.hammerEgg .egg span {
+    position: absolute;
+    left: 47%;
+    top: 48%;
+    font-size: 50px;
+    font-weight: 20px;
+    color: #CCFF00;
+    *line-height: 50px;
+    visibility: hidden;
+}
+.hammerEgg .egg.curr {
+    background: none;
+}
+.hammerEgg .egg .brokenFlower {
+    display: none;
+    background: url(img/brokenEgg.png) no-repeat;
+    width: 380px;
+    height: 452px;
+    position: absolute;
+    left: 21px;
+    top: 10px;
+}
+.hammerEgg .cover {
+    background: #ffc;
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+    width: 100%;
+    height: 100%;
+    padding-top: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display:none;
+}
+.hammerEgg .resultTip {
+    display: none;
+    width: 100%;
+    height: 460px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*opacity: 0.5;*/
+    text-align: center;
+    font-size: 50px;
+    color: red;
+    *line-height: 50px;
+}
+.hammerEgg .resultTip a {
+    position: absolute;
+    left: 46%;
+    top: 80%;
+}
+.hammerEgg .resultContent{
+    position: absolute;
+    left: 160px;
+    top: 220px;
+}
+
+/*砸金蛋 结束*/

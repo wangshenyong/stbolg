@@ -1,0 +1,43 @@
+<div v-lazy-load="htmls/gestesBody/gestesBodyCtrl.js">
+    <div v-controller="gestesBodyCtrl">
+         <div id="breadcrumb">
+            <ul>
+                <li><img src="css/img/img/icons/icon_breadcrumb.png" alt="Location"></li>
+                <li><strong>Location:</strong></li>
+                <li><a href="#" title="">Sub Section</a></li>
+                <li>/</li>
+                <li class="current">Control Panel</li>
+                <li v-click = "view()">view</li>
+            </ul>
+        </div>
+        <div id="leftside">
+            <div class="user" v-click="gotocontent()">
+                <img src="css/img/img/avatar.png" width="44" height="44" class="hoverimg" alt="Avatar" />
+                <p>Logged in as:</p>
+                <p class="username">Administrator</p>
+                <p class="userbtn"><a href="#" title="">Profile</a></p>
+                <p class="userbtn"><a href="#" title="">Log out</a></p>
+            </div>
+            <div class="notifications">
+                <p class="notifycount"><a href="" title="" class="notifypop">10</a></p>
+                <p><a href="" title="" class="notifypop">最后登录日期</a></p>
+                <p class="smltxt">2017/09/09</p>
+            </div>
+            <ul id="nav">
+                <li v-repeat="item in navMessage.nav" v-click="changeshow($event)">
+                    <a v-class="{expanded:Flag,collapsed:true,heading:true}"  v-click="Flag = !Flag">{{item.header}}</a>
+                    <ul v-class="{navigation:true,godNone:!Flag}" >
+                       
+                         <li v-repeat="itemTitle in item.title track by $index " class="aVisited" >
+                            {{itemTitle}}
+                        </li>
+                       
+
+                    </ul>
+                </li>
+               
+            </ul>
+        </div>
+        <div v-page href="htmls/gestesBody/gestesContent.html"></div>
+    </div>
+</div>

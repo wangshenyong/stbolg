@@ -1,0 +1,64 @@
+/*上滑加载 开始*/
+
+.scrollWrap {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	overflow: auto;
+}
+
+.scrollWrap>div {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	padding: 0;
+}
+
+.scrollWrap #pullUp,.scrollWrap #pullDown {
+	height: 40px;
+	line-height: 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgb(213, 187, 185);
+	padding-bottom:15px;
+}
+
+.scrollWrap #pullUp .pullUpIcon {
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	/*background: url(../imgs/Loading1.gif) 0 0 no-repeat;*/
+	/*background: url(images/SliderLoading/loading-ios.gif) 0 0 no-repeat;*/
+	/*background-size: 45px;*/
+	margin-bottom: -15px;
+}
+
+.scrollWrap #pullDown .pullDownIcon {
+	display: inline-block;
+	width: 42px;
+	height: 42px;
+	/*background: url(images/SliderLoading/loading-ios.gif) 0 0 no-repeat;
+	background-size: 42px;*/
+	margin-bottom: -13px;
+}
+
+.scrollWrap #pullUp.peak .pullUpIcon {
+	/*-webkit-transform: rotate(180deg) translateZ(0);*/
+	-webkit-transform: rotate(0deg) translateZ(0);
+}
+
+.scrollWrap #pullUp.loading .pullUpIcon {
+	/*background: url(../imgs/Loading1.gif) 0 0 no-repeat;*/
+	/*background: url("images/SliderLoading/loading-ios.gif") 0 0 no-repeat;*/
+	/*background-size: 45px 45px;*/
+	width: 45px;
+	margin-bottom: -13px;
+}
+
+.scrollWrap #pullUp.nomore .pullUpIcon {
+	display: none;
+}
+/*上滑加载 结束*/

@@ -1,0 +1,94 @@
+.godNone
+{
+	display:none;
+}
+/*.aVisited
+{
+	background:url(/static/img/bg_navigation_selected.png) no-repeat -1px 0 ;*/
+	/*background:red;
+	width:226px ;
+	padding:10px ;
+	height: 1.5em ;
+
+}*/
+.aVisited
+{
+	width:205px;
+	background:url(/static/img/bg_navigation_link.png) repeat-x top;
+	text-shadow:1px 1px 1px #222;
+	line-height: 1.2em ;
+	display: block;
+	color:#FFFFFF;
+	padding:10px;
+}
+.aVisited_V
+{
+	background:url(/static/img/bg_navigation_selected.png) no-repeat -1px 0 ;
+	/*background:red;*/
+	width:226px ;
+	padding:10px ;
+	height: 1.5em ;
+}
+.aVisited:hover
+{
+	background:#333;
+	
+}
+.contentBox
+{
+	
+	width:100%;
+}
+.contentBoxContent
+{
+	margin:10px auto;
+	background:#FFE082 url(/static/img/bg_noticebox_yellow.png) repeat-x top;
+	padding:15px;
+	border:1px solid #FDD845;
+	text-shadow:1px 1px #FFFFFF;
+	text-align:left;
+}
+#viewsBox
+{
+	position: relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:9999;
+}
+/*富文本编辑器样式*/
+.quill-editor
+{
+	/*border-radius:15px 15px 15px 15px !important;*/
+}
+.ql-toolbar
+{
+	background:	#ffff00;
+}
+.ql-toolbar,.ql-container,.ql-snow
+{
+	border:none !important;
+
+	
+}
+.ql-container
+{
+	min-height:300px;
+	background:green;
+}
+.ql-formats 
+{
+	/*border:1px solid red;*/
+	/*border: 1px solid  green;*/
+	background:	#00ff00;
+	float:left;
+	margin-top:5px;
+	border-radius: 5px;
+}
+/*编辑框保存按钮*/
+.submit_editor
+{
+	float:right !important;
+	margin-right:10px;
+}

@@ -1,0 +1,73 @@
+<div v-lazy-load="htmls/FileDownload/CustomerListDetailQryCtrl.js">
+
+<div class="czy_login_right" v-controller="CustomerListDetailQryCtrl" v-init="startup()">
+	<div class="use_tiele_a">
+		<span>客户管理</span>
+	</div>
+	<div class="dp_table">
+		<div class="tabPanel">
+			<div class="dianpu_div"></div>
+			<ul>
+				<li v-click="goto('app.CustomerListQry')">
+					汇总查询
+				</li>
+				<li class="hit">
+					明细查询
+				</li>
+			</ul>
+			<div class="panes">
+				<div class="pane">
+					<div class="up_01">
+						<div class="up_02">
+							<a href="javascript:void(0)" v-click="toDetailExcel()" class="blue_color">下载表格</a>
+						</div>
+					</div>
+					<div class="czy_login_c ding_20">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="20%" align="right">开始时间：</td>
+								<td width="20%">
+								<input type="text" class="box_b03_input gaodu" placeholder="开始时间"  id="BeginTime" name="BeginTime" v-model="BeginTime" ui-calendar='{"todayBtn":1,"minView":2,"autoclose": true,"format": "yyyy-mm-dd","startDate":"","endDate":""} ' style="width:95px;"/>
+								</td>
+								<td width="10%" align="right">结束时间：</td>
+								<td width="20%">
+								<input type="text" class="box_b03_input gaodu" placeholder="结束时间"  id="EndTime" name="EndTime" v-model="EndTime" ui-calendar='{"todayBtn":1,"minView":2,"autoclose": true,"format": "yyyy-mm-dd","startDate":"","endDate":""} ' style="width:95px;"/>
+								</td>
+								<td width="15%" >
+								<input name="button" type="button" class="czy_login_but" id="button" value="查询" v-click="toDetail()">
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="czy_table">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="khgl_tab" id="tab" ui-pager="detailLessList">
+							<thead>
+							<tr>
+								<th><span class="left_30">客户用户名</span></th>
+								<th>客户手机号码</th>
+								<th>客户交易笔数</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr class="css1" v-repeat="detailLess in detailLessList.List">
+								<td><img src="images/photo_04.png" width="42" height="42" class="left_30" /><a href="javascript:void(0)" v-click="toPage($index)">{{detailLess.UserId}}</a></td>
+								<td><img src="images/photo_03.png" width="13" height="25" /><span class="yell_color jiacu">{{detailLess.MobilePhone}}</span></td>
+								<td>{{detailLess.OrderCount}}</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!--错误提示信息-->
+				<div class="tsbc_a" v-show="jsonError[0]">
+					<div class="tsbc_width">
+						<alert v-show="jsonError[0]" type="danger" close="jsonError=[]">
+							{{jsonError[0]._exceptionMessage}}
+						</alert>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

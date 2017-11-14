@@ -1,0 +1,124 @@
+.uiscale{height: auto !important;min-height: 100%;position: relative;background:#fff;}
+/*.uiscale .page-bot{position: absolute;width:100%;left:0;bottom:0.5rem;}*/
+.uiscale .ruler{height:3rem;overflow: hidden;position: relative;}
+.uiscale .ruler:before,.ruler:after{content: "";position: absolute;top:0;height:1.5rem;width:22%;z-index: 3;}
+.uiscale .ruler .main{width:30000px;position: relative;left:-45px;}
+.uiscale .ruler .main ul{overflow: hidden;}
+.uiscale .ruler-weight .main ul{overflow: hidden;}
+.uiscale .ruler-age .main ul{overflow: hidden;}
+.uiscale .ruler li{float: left;width:2.5rem;padding-top:1.2rem;text-align: center;color:#d4d4d4;}
+.uiscale .ruler li .num{display: inline-block;position: relative;margin-right:-0.15rem;margin-bottom:0.2rem;font-size:0.6rem;margin-right: -1rem;min-width: 2rem;text-align: center;font-size: .7rem;}
+.uiscale .ruler .arrow{width:0.025rem;height: 1.55rem;border-left:0.1rem solid #ff9853;position: absolute;left:50%;top:0;margin-left:-.05rem; }
+.uiscale .ruler .strnum{position: absolute;top: 1.4rem;color: #ccc;width: 20px;display: inline-block;text-align: center;left: -10px;font-size: .7rem;}
+.uiscale li.keduc{ width:2.5rem; height:0.75rem;}
+.uiscale li.keduc{float: left;width: 100px;height: 60px;background: url(img/ruler_height.png) right  top no-repeat;background-size: 90px;padding-top: 28px;text-align: right ;color: #d4d4d4;padding-left: 0;}
+.uiscale li.keduc.first{background: url(img/ruler_height_f.png) right  top no-repeat !important;background-size: 100px !important; }
+/*.uiscale .row-hide{display: none;}*/
+.uiscale .uiscale-main .label{display: block;font-size: 0.6rem;color:#888;padding-bottom:0.4rem;text-align:center;}
+.uiscale .uiscale-main .label .tips{font-size:0.3rem;color:#999;display: block;}
+.uiscale .uiscale-main .width-num{ font-size:1.5rem; color:#ff6a3c; margin-left:0.25rem; margin-right:0.25rem; border-bottom:.05rem dashed #d4d4d4;}
+.uiscale .uiscale-main .label_01{display: block;font-size: 0.55rem;color:#888;padding-bottom:.4rem;text-align:center;margin-top:0.75rem;}
+.uiscale .uiscale-main input[type=text].width-num,.uiscale-main input[type=number].width-num{width: 40%;padding: 0;text-align: center;font-size: 1.5rem;font-family: normal Simsun;}
+.uiscale .uiscale-main input[type=text].width-num:focus,.uiscale-main input[type=number].width-num:focus{border-bottom: .05rem dashed #d4d4d4;}
+.uiscale ul li {
+    list-style: none;
+    margin: 0rem;
+    padding: 0rem;
+}
+.uiscale ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+/*自适应*/
+@media screen and (min-width: 212px){
+    html{font-size:13px;}
+}
+@media screen and (min-width: 228px){
+    html{font-size:14px;}
+}
+@media screen and (min-width: 240px){
+    html{font-size:15px;}
+}
+@media screen and (min-width: 256px){
+    html{font-size:16px;}
+}
+@media screen and (min-width: 272px){
+    html{font-size:17px;}
+}
+@media screen and (min-width: 288px){
+    html{font-size:18px;}
+}
+@media screen and (min-width: 304px){
+    html{font-size:19px;}
+}
+@media screen and (min-width: 320px){
+    html{font-size:20px;}
+}
+@media screen and (min-width: 336px){
+    html{font-size:21px;}
+}
+@media screen and (min-width: 352px){
+    html{font-size:22px;}
+}
+@media screen and (min-width: 368px){
+    html{font-size:23px;}
+}
+@media screen and (min-width: 375px){
+    html{font-size:23.5px;}
+}
+@media screen and (min-width: 384px){
+    html{font-size:24px;}
+}
+@media screen and (min-width: 400px){
+    html{font-size:25px;}
+}
+@media screen and (min-width: 414px){
+    html{font-size:25.875px;}
+}
+@media screen and (min-width: 416px){
+    html{font-size:26px;}
+}
+@media screen and (min-width: 432px){
+    html{font-size:27px;}
+}
+@media screen and (min-width: 448px){
+    html{font-size:28px;}
+}
+@media screen and (min-width: 464px){
+    html{font-size:29px;}
+}
+@media screen and (min-width: 480px){
+    html{font-size:30px;}
+}
+@media screen and (min-width: 496px){
+    html{font-size:31px;}
+}
+@media screen and (min-width: 512px){
+    html{font-size:32px;}
+}
+@media screen and (min-width: 528px){
+    html{font-size:33px;}
+}
+@media screen and (min-width: 544px){
+    html{font-size:34px;}
+}
+@media screen and (min-width: 560px){
+    html{font-size:35px;}
+}
+@media screen and (min-width: 576px){
+    html{font-size:36px;}
+}
+@media screen and (min-width: 592px){
+    html{font-size:37px;}
+}
+@media screen and (min-width: 608px){
+    html{font-size:38px;}
+}
+@media screen and (min-width: 624px){
+    html{font-size:39px;}
+}
+@media screen and (min-width: 640px){
+    html{font-size:40px;}
+}

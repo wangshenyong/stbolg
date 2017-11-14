@@ -1,0 +1,53 @@
+@media (min-width: 960px) {
+    .btnboxs input[type=button], .btnboxs input[type=submit] {
+        width: 30%;
+    }
+    #verify input.inpt{
+        width: 40%;
+    }
+    #verify span{
+        width: 25%;
+        height: 44px
+    }
+    #verify .verify{
+        display: inline-block;
+    }
+}
+
+@media (min-width: 768px) and  (max-width: 959px) {
+    .btnboxs input[type=button], .btnboxs input[type=submit] {
+        width: 35%;
+    }
+
+}
+
+@media (min-width: 320px) and  (max-width: 1100px) {
+    .btnboxs input[type=button], .btnboxs input[type=submit] {
+        width: 30%;
+    }
+    .tabList td .inpt {
+        width: 100%;
+    }
+    #verify td:last-child{
+        position: relative;
+    }
+    #verify input.inpt{
+        width:55%;
+        /*margin-right: 100px;*/
+    }
+    #verify span{
+        float: right;
+    }
+    #verify .verify{
+        display: none;
+    }
+}
+
+@media (max-width: 319px) {
+    .btnboxs input[type=button], .btnboxs input[type=submit] {
+        width: 45%;
+    }
+    .tabList td .inpt {
+        width: 100%;
+    }
+}

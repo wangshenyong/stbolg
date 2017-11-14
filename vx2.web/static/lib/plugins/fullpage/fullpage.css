@@ -1,0 +1,11 @@
+.fullpage>.section h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+.fullpage>.section:nth-child(odd) {
+    background-color: rgb(27, 188, 155);
+}
+.fullpage>.section:nth-child(even) {
+    background-color: rgb(75, 191, 195);
+}

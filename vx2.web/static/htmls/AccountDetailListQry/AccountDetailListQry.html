@@ -1,0 +1,167 @@
+<div v-lazy-load="htmls/AccountDetailListQry/AccountDetailListQry.js">
+	<div v-controller="AccountDetailListQryCtrl" v-init="start()">
+		<div class="wrap">
+			<div class="container">
+				<nav class="breadcrumbs">
+					<ul>
+						<li>
+							<a href="">首页</a>
+						</li>
+						<li>
+							<a href="">我的网银</a>
+						</li>
+						<li class="active">
+							<a href="">账户明细查询</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="grid">
+					<div class="row no-margin-top">
+						<div v-viewport="content">
+							<div class="content_window_panel" v-page>
+								<form name="JnlForm" v-submit="AccDetailQry()" novalidate>
+									<div class="row">
+										<div class="example span12">
+											<legend>
+												查询条件
+											</legend>
+											<label>账户列表:</label>
+
+											<div class="input-control select">
+												<select class="sel" name="Acc" v-model="Acc"
+												        v-options="row.AcNo|accountNoFilter for row in AccList">
+												</select>
+											</div>
+											<label>币种 :</label>
+
+											<div class="input-control select">
+												<select class="sel">
+													<option>人民币</option>
+												</select>
+											</div>
+											<label>开始日期 :</label>
+
+											<div class="input-control text">
+												<input type="text" id="BeginDate" name="BeginDate" v-model="BeginDate"
+												       ui-calendar='{"todayBtn":1,"minView":2,"autoclose": true,"format": "yyyy-mm-dd"}'
+												       title="开始日期" placeholder="开始日期" required/>
+											</div>
+											<label>结束日期 :</label>
+
+											<div class="input-control text">
+												<input type="text" id="EndDate" name="EndDate" v-model="EndDate"
+												       ui-calendar='{"todayBtn":1,"minView":2,"autoclose": true,"format": "yyyy-mm-dd"}'
+												       title="起始日期" placeholder="结束日期"/>
+											</div>
+											<div class="input-control">
+												<button class="button success" type="submit" style="width: 100%">
+													查询
+												</button>
+											</div>
+										</div>
+									</div>
+								</form>
+								<!-- 操作日志查询内容 -->
+								<div class="row" v-show="Order&&Order.List.length>0">
+									<div class="example phone-no-example span12">
+										<legend class="form-style no-tablet-portrait no-phone">
+											查询结果
+										</legend>
+										<table class="table tabInfoList" ui-pager="Order" pagertype="vx">
+											<thead>
+											<tr>
+												<th>交易时间</th>
+												<th>收入</th>
+												<th>支出</th>
+												<th>账户余额</th>
+												<th>对方账号</th>
+												<th>对方户名</th>
+												<th>交易机构</th>
+												<th>摘要</th>
+												<th>详情</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr class="bgBlue" v-repeat="row in Order.List">
+												<td><p>{{row.TrsDate}}</p><span>{{row.TrsTime}}</span></td>
+												<td class="red">{{row.Amount}}</td>
+												<td>_ _</td>
+												<td>{{row.Balance|number:2}}</td>
+												<td>{{row.PayeeAcNo|accountNoFilter}}</td>
+												<td>{{row.PayeeAcName}}</td>
+												<td>{{row.PayeeBank}}</td>
+												<td>{{row.Remark}}</td>
+												<td><a v-click="doDetail(row);">详情</a></td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="content_window_panel" v-page>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid">
+					<div class="row">
+						<nav class="navigation-bar light">
+							<div class="navigation-bar-content" ui-menupull>
+								<a class="element"><span class="icon-cube"></span> 关联菜单 <!-- <sup>快捷</sup> --></a>
+								<span class="element-divider"></span>
+								<a class="element1 pull-menu" href=""></a>
+								<ul class="element-menu on-desktop">
+									<li>
+										<a href="" class="icon-link"> 追加/删除账户</a>
+									</li>
+									<li>
+										<a href="" class="icon-link"> 预约转账</a>
+									</li>
+									<li>
+										<a href="" class="icon-link"> 本行转账</a>
+									</li>
+								</ul>
+
+								<div class="no-tablet-portrait">
+									<span class="element-divider"></span>
+									<a class="element brand" href=""><span class="icon-spin"></span></a>
+									<a class="element brand" href=""><span class="icon-printer"></span></a>
+									<span class="element-divider"></span>
+
+									<div class="element input-element">
+										<form>
+											<div class="input-control text">
+												<input type="text" placeholder="Search...">
+												<button class="btn-search"></button>
+											</div>
+										</form>
+									</div>
+									<div class="element place-right">
+										<a class="dropdown-toggle" href=""> <span class="icon-cog"></span> </a>
+										<ul class="dropdown-menu place-right" data-role="dropdown">
+											<li>
+												<a href="">Products</a>
+											</li>
+											<li>
+												<a href="">Download</a>
+											</li>
+											<li>
+												<a href="">Support</a>
+											</li>
+											<li>
+												<a href="">Buy Now</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>

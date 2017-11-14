@@ -1,0 +1,497 @@
+.regBox table td input[type=password] {
+    border: 1px solid #d2d2d2;
+    box-sizing: border-box;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 0 0 10px;
+    width: 310px;
+}
+
+.regBox table td input[type=password].yzm {
+    width: 180px;
+}
+
+.regBox table td > .ctrl.ng-invalid + p {
+    color: red;
+}
+
+.regBox table td > .ctrl.ng-valid + p {
+    color: green;
+}
+
+.btnboxs {
+    text-align: center;
+    margin: 20px auto 0 auto;
+}
+
+.menuBox li dl dt a.active {
+    background-color: #e71c2d;
+}
+
+.tabList td .inpt {
+    box-sizing: border-box;
+    margin-right: 10px;
+    width: 65%;
+}
+
+.btnboxs input[type=button], .btnboxs input[type=submit] {
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 40px;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    background: #e71c2d;
+    border-radius: 5px;
+}
+
+#loginapp .btnboxs input[type=button], #loginapp .btnboxs input[type=submit] {
+    width: 220px;
+}
+
+.btnboxs input[type=button].back {
+    color: #e71c2d;
+    border: 1px solid #e71c2d;
+    background: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.rightCont .conecter.drawBack {
+    width: 0px;
+}
+
+.rightCont .drawBack .left {
+    width: 0px;
+    overflow: hidden;
+}
+
+/*水平翻转*/
+.drawBack .arrow {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    right: -15px;
+    /*IE*/
+    filter: FlipH;
+}
+
+#box {
+    height: 660px;
+    overflow-y: auto;
+}
+
+/*scroller*/
+::-webkit-scrollbar {
+    width: 7px;
+    height: auto;
+}
+
+::-webkit-scrollbar-button {
+    height: 0;
+    width: 0
+}
+
+::-webkit-scrollbar-button:end:increment, ::-webkit-scrollbar-button:start:decrement {
+    display: block
+}
+
+::-webkit-scrollbar-button:vertical:end:decrement, ::-webkit-scrollbar-button:vertical:start:increment {
+    display: none
+}
+
+::-webkit-scrollbar-thumb:horizontal, ::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-track:horizontal, ::-webkit-scrollbar-track:vertical {
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 2px;
+    border-width: 0
+}
+
+::-webkit-scrollbar-track:horizontal, ::-webkit-scrollbar-track:vertical {
+    background-clip: padding-box;
+    background-color: transparent
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+    background-clip: padding-box;
+    background-color: rgba(0, 0, 0, .2);
+    min-height: 28px;
+    padding-top: 100px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, .4)
+}
+
+::-webkit-scrollbar-thumb:active {
+    -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .35);
+    background-color: rgba(0, 0, 0, .5)
+}
+
+::-webkit-scrollbar-track:hover {
+    -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .05)
+}
+
+::-webkit-scrollbar-track:active {
+    -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, .14), inset -1px -1px 0 rgba(0, 0, 0, .07);
+    background-color: rgba(0, 0, 0, .05)
+}
+
+.regBox table td > input[type=text], .regBox table td > input[type=password], .regBox table td > select {
+    font-size: 14px;
+}
+
+#login_box ul input[type=submit].log {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 201px;
+    height: 38px;
+    background: url(../images/loginBtn.jpg) no-repeat;
+    border: 0;
+    cursor: pointer;
+}
+
+.sel_input {
+    position: relative;
+}
+
+.sel_input > ul {
+    float: none;
+    padding: 0px;
+    position: absolute;
+    height: 480px;
+    overflow-x: hidden;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.sel_input > ul > li {
+    float: none;
+}
+
+.sel_input ul li a {
+    display: block;
+    height: 35px;
+    width: 250px;
+    line-height: 35px;
+    padding: 0 15px;
+    cursor: pointer;
+    background: none;
+}
+
+.dropdown-menu {
+    border: 1px solid #dee5e7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.pull-left {
+    left: 100%;
+}
+
+.dropdown-menu > .panel {
+    margin: -5px 0;
+    border: none;
+}
+
+.dropdown-menu > li > a {
+    padding: 5px 15px;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    color: #141719;
+    background-color: #edf1f2 !important;
+    background-image: none;
+    filter: none;
+}
+
+.dropdown-header {
+    padding: 5px 15px;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+    color: #58666e;
+    background-color: #edf1f2 !important;
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu.pull-left {
+    float: none !important;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+}
+
+.dropup .dropdown-submenu > .dropdown-menu {
+    top: auto;
+    bottom: 0;
+}
+
+.btn-group > .btn {
+    margin-left: -1px;
+}
+
+input.inpt {
+    position: relative;
+    border-radius: 5px;
+    height: 38px;
+    padding: 0px 6px;
+}
+
+select.sel {
+    position: relative;
+    border-radius: 4px;
+    height: 38px;
+    padding: 0px 6px;
+}
+
+/*input.inpt.ng-invalid {*/
+/*border: 1px solid red;*/
+/*}*/
+
+/*select.sel.ng-invalid {*/
+/*border: 1px solid red;*/
+/*}*/
+
+.regBox table td input.checkbox {
+    position: relative;
+}
+
+.regBox table td > input[type=text], .regBox table td > input[type=password] {
+    border: 1px solid #d2d2d2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+/*.regBox table td > input[type=text].ng-invalid, .regBox table td > input[type=password].ng-invalid {*/
+/*border: 1px solid rgba(255, 0, 0, .8);*/
+/*box-shadow: 0 5px 10px rgba(255, 0, 0, .4);*/
+/*}*/
+
+/*dialog*/
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+}
+
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+
+.modal-backdrop.fade {
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.modal-header {
+    min-height: 16.42857143px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header .close {
+    margin-top: -2px;
+}
+
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+}
+
+.modal-body {
+    position: relative;
+    padding: 15px;
+}
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer .btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+}
+
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    }
+
+    .modal-sm {
+        width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 900px;
+    }
+}
+
+.modal-footer:before,
+.modal-footer:after {
+    display: table;
+    content: " ";
+}
+
+.modal-footer:after {
+    clear: both;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.swiper-pagination-bullet {
+    background: #000;
+}
+
+.swiper-pagination-bullet-active {
+    background: #e04d31;
+}
+
+.regBox table td .error {
+    font-size: 13px;
+}

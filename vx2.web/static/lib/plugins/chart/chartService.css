@@ -1,0 +1,25 @@
+/**环形图开始*/
+.chartService .quantext{
+	top:50%;
+	width:100%;
+	height:151px;
+	margin-top:-30px;
+	position:absolute;
+    z-index:100;
+	text-align:center;
+	font-size:12px;
+}
+.chartService .quantext span{color: #FB953B;}
+.chartService .quancanvas{
+	position:relative;
+	left:0%;
+	top:0%;
+	text-align:center;
+}
+.chartService.quanbig{
+	width:100%;
+	height:100%;
+	position:relative;
+	text-align:center;
+}
+/**环形图结束*/

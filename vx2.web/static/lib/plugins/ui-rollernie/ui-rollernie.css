@@ -1,0 +1,163 @@
+/*滚动摇奖开始*/
+
+.rollErnie {
+    margin: 0 auto;
+    /*height: 435px;
+  width: 800px;
+  padding-top: 30px;*/
+    position: relative;
+    /*background-color: #cc3;*/
+}
+
+.rollErnie .rollErnieBody {
+    padding: 28px;
+    background-color: #CCFF00;
+    width: 210px;
+    margin: 115px auto;
+    border-radius: 20px;
+}
+
+.rollErnie .w1, .rollErnie .w2, .rollErnie .w3 {
+    overflow: hidden;
+    width: 47px;
+    height: 65px;
+    position: relative;
+    float: left;
+    background-color: #990000;
+}
+
+.rollErnie .w1 div, .rollErnie .w2 div, .rollErnie .w3 div {
+    width: 47px;
+    height: 65px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.rollErnie .img0 {
+    top: 0;
+}
+
+.rollErnie .w1 .img1 {
+    background-image: url(img/orange1.gif);
+}
+
+.rollErnie .w1 .img2 {
+    background-image: url(img/orange2.gif);
+}
+
+.rollErnie .w1 .img3 {
+    background-image: url(img/orange3.gif);
+}
+
+.rollErnie .w1 .img4 {
+    background-image: url(img/orange4.gif);
+}
+
+.rollErnie .w1 .img5 {
+    background-image: url(img/orange5.gif);
+}
+
+.rollErnie .w1 .img0 {
+    background-image: url(img/orangeGo.gif);
+}
+
+.rollErnie .w2 .img1 {
+    background-image: url(img/blue1.gif);
+}
+
+.rollErnie .w2 .img2 {
+    background-image: url(img/blue2.gif);
+}
+
+.rollErnie .w2 .img3 {
+    background-image: url(img/blue3.gif);
+}
+
+.rollErnie .w2 .img4 {
+    background-image: url(img/blue4.gif);
+}
+
+.rollErnie .w2 .img5 {
+    background-image: url(img/blue5.gif);
+}
+
+.rollErnie .w2 .img0 {
+    background-image: url(img/blueGo.gif);
+}
+
+.rollErnie .w3 .img1 {
+    background-image: url(img/green1.gif);
+}
+
+.rollErnie .w3 .img2 {
+    background-image: url(img/green2.gif);
+}
+
+.rollErnie .w3 .img3 {
+    background-image: url(img/green3.gif);
+}
+
+.rollErnie .w3 .img4 {
+    background-image: url(img/green4.gif);
+}
+
+.rollErnie .w3 .img5 {
+    background-image: url(img/green5.gif);
+}
+
+.rollErnie .w3 .img0 {
+    background-image: url(img/greenGo.gif);
+}
+
+.rollErnie .operationArea {
+    padding: 10px;
+}
+
+.rollErnie .operationArea #stop {
+    margin-left: 10px;
+}
+
+.rollErnie .continueTip, .rollErnie .resultTip,.rollErnie .winPrizeTip {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.rollErnie .cover {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    background: #f1c40f;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.rollErnie .continueTip span, .rollErnie .resultTip span,.rollErnie .winPrizeTip span {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 35%;
+    font-size: 30px;
+    color: red;
+    line-height: 60px;
+    text-align: center;
+}
+
+.rollErnie .continueTip button, .rollErnie .resultTip button,.rollErnie .winPrizeTip button {
+    position: absolute;
+    left: 50%;
+    top: 76%;
+    *top: 80%;
+    margin-left: -51px;
+}
+
+
+/*滚动摇奖结束*/

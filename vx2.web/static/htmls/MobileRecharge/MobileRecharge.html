@@ -1,0 +1,42 @@
+<div class="bgGray" v-lazy-load="htmls/MobileRecharge/MobileRecharge.js">
+	<div class="wrap" >
+		<div class="leftMenu"><!--左侧-->
+			<div class="box">
+				<h2 class="titLine">生活服务</h2>
+				<ul class="lifeService">
+					<li><a v-click="goto('/app/AccountBind')">账号绑定<i>&gt;</i></a></li>
+					<li class="on"><a v-click="goto('/app/MobileRecharge')">手机充值<i>&gt;</i></a></li>
+					<li><a>水费<i>&gt;</i></a></li>
+					<li><a>电费<i>&gt;</i></a></li>
+					<li><a>煤气费<i>&gt;</i></a></li>
+					<li><a>取暖费<i>&gt;</i></a></li>
+					<li><a>缴费记录查询<i>&gt;</i></a></li>
+					<li><a>更多<i>&gt;</i></a></li>
+				</ul>
+			</div>
+			<div class="h10"></div>
+			<div class="box fastMenu">
+				<h2 class="titLine">生活服务</h2>
+				<a><img src="images/icon1.png"></a>
+				<a><img src="images/icon2.png"></a>
+				<a><img src="images/icon3.png"></a>
+				<a><img src="images/icon4.png"></a>
+				<a><img src="images/icon5.png"></a>
+				<a><img src="images/icon6.png"></a>
+				<a><img src="images/icon7.png"></a>
+			</div>
+			<div class="h10"></div>
+			<div class="box fastMenu">
+				<h2 class="titLine">最近公告</h2>
+
+				<p class="center"><img src="images/public.jpg"></p>
+			</div>
+		</div>
+		<div v-controller="MobileRechargeCtrl" v-init="startup()">
+			<div class="rightCont" v-page href="htmls/MobileRecharge/MobileRechargePre.html"></div>
+			<div class="rightCont" v-page href="htmls/MobileRecharge/MobileRechargeCom.html"></div>
+			<div class="rightCont" v-page href="htmls/MobileRecharge/MobileRechargePay.html"></div>
+			<div class="rightCont" v-page href="htmls/MobileRecharge/MobileRechargeRes.html"></div>
+		</div>
+	</div>
+</div>

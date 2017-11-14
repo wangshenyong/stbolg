@@ -1,0 +1,28 @@
+<!--可直接从美工拷贝过来-->
+<form name="confForm" class="form-horizontal" v-submit="doConf();" novalidate>
+	<div class="grid">
+		<div class="row">
+			<label class="span4 text-right">转出账号:</label>
+			<div class="span5 input-control">
+								{{AccNo.No}}
+			</div>
+		</div>
+		<div class="row">
+			<label class="span4 text-right">转入账号:</label>
+			<div class="span5 input-control">
+				{{PayeeAccNo}}
+			</div>
+		</div>
+		<div class="row">
+			<label class="span4 text-right">金额:</label>
+			<div class="span5 input-control">
+				{{Amount}}
+			</div>
+		</div>
+		<div class="row">
+			<label class="span4 text-right">
+				<input type="submit" value="确认" />
+			</label>			
+		</div>
+	</div>
+</form>

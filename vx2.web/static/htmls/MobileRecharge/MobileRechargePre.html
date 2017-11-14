@@ -1,0 +1,117 @@
+<div class="conecter" ng-class="{true:'drawBack',false:''}[drawBack]">
+	<a class="arrow" v-click="drawBack=!drawBack"></a>
+
+	<div class="left">
+		<h2>常用联系人</h2>
+
+		<p><input class="search" type="text" name="word" v-model="word" placeholder="搜索联系人"></p>
+
+		<div id="scrollBox">
+			<div id="box" style="top: 0px;">
+				<dl>
+					<dd v-repeat="row in ContactsList|filter:word">
+						<p><span>{{row.name}}</span><em><a class="edit"></a><a class="delet"
+						                                                       v-click="contactDel($index)"></a></em>
+						</p>
+
+						<p>{{row.phone}}</p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+<form name="formPre" v-submit="MobileRechargePre()" novalidate>
+	<div class="charge left">
+		<h2>话费充值</h2>
+		<table class="tabList">
+			<tbody>
+			<tr>
+				<td class="tit">输入方式</td>
+				<td>
+					<select class="sel" name="inputType" v-model="inputType">
+						<option value="">自动选择</option>
+						<option value="1">手动录入</option>
+					</select>
+				</td>
+			</tr>
+			<tr v-show="inputType">
+				<td class="tit"><em class="red">*</em> 输入号码</td>
+				<td>
+					<input class="inpt" type="text" name="concatPhone" v-model="concatPhone"
+					       v-required="inputType">
+				</td>
+			</tr>
+			<tr v-show="inputType">
+				<td class="tit">是否保存联系人</td>
+				<td><input class="save" type="checkbox" name="isSave" v-model="isSave"></td>
+			</tr>
+			<tr v-show="inputType&&isSave">
+				<td class="tit"><em class="red">*</em> 联系人名称</td>
+				<td>
+					<input class="inpt" type="text" name="concatName" v-model="concatName"
+					       v-required="inputType&&isSave"
+					       v-blur="saveContact()">
+				</td>
+			</tr>
+			<tr v-show="!inputType">
+				<td class="tit"><em class="red">*</em> 选择号码</td>
+				<td>
+					<select class="sel" name="contact" v-model="contact"
+					        v-options="row.phone+'/'+row.name for row in ContactsList" required>
+					</select>
+
+				</td>
+			</tr>
+			<tr v-show="!inputType">
+				<td class="tit">号码区域</td>
+				<td>
+					<span class="gray">{{contact.region}}</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="tit"><em class="red">*</em>充值面值</td>
+				<td>
+					<p class="tabTit" v-click="clickTit($event)">
+						<abc v-repeat="row in ProdsList" v-click="clickFace(row)">
+							<abc v-show="$index%4==3"><a
+									ng-class='{true:"on",false:""}[row==selectProd]'>{{row.prodtDsclrTlstPrc+'元'}}</a><br/>
+							</abc>
+							<abc v-show="$index%4!=3"><a
+									ng-class='{true:"on",false:""}[row==selectProd]'>{{row.prodtDsclrTlstPrc+'元'}}</a>
+							</abc>
+						</abc>
+
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="tit"><em class="red">*</em> 需付金额</td>
+				<td class="ft20"><span
+						class="red">{{(selectProd&&selectProd.prodtDsclrLowPrc||0)|number:2}}</span>元
+				</td>
+			</tr>
+			<tr>
+				<td class="tit"><em class="red">*</em> 付款账户</td>
+				<td>
+					<select class="sel" name="Acc" v-model="Acc"
+					        v-options="row.AcNo|accountNoFilter for row in AccList" required>
+					</select>
+				</td>
+			</tr>
+			<tr id="verify">
+				<td class="tit"><em class="red">*</em> 校验码</td>
+				<td><input class="inpt" type="text" name="verifyCode" v-model="verifyCode" required><span>
+					<img
+							src="images/code.jpg" style="height: 36px;">
+				</span><a class="blue verify">看不清，换一张</a>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="btnboxs">
+			<input type="submit" value="下一步"/>
+			<input type="button" value="返回" class="back" v-click="goto('#1')"/>
+		</div>
+	</div>
+</form>

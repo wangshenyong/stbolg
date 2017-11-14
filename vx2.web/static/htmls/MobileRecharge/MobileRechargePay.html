@@ -1,0 +1,26 @@
+<form name="conFormPay" novalidate>
+	<div class="charge">
+		<h2>话费充值</h2>
+		<table class="tabList">
+			<tbody>
+			<tr>
+				<td class="tit">交易日期</td>
+				<td>{{orderInfo.TrdeDt|date:'yyyy-MM-dd'}}</td>
+			</tr>
+			<tr>
+				<td class="tit">订单流水号</td>
+				<td><em>{{orderInfo.PfrmSnbr}}</em>
+				</td>
+			</tr>
+			<tr>
+				<td class="tit">子订单流水</td>
+				<td>{{orderInfo.RepList&&orderInfo.RepList[0].ordSubSnbr||"7561178d5ab04dce88f7c35d8c47027f"}}</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="btnboxs">
+			<input type="submit" value="支付" v-click="MobileRechargePay()">
+			<input type="button" value="返回" class="back" v-click="goto('#1')">
+		</div>
+	</div>
+</form>

@@ -1,0 +1,122 @@
+<div v-lazy-load="htmls/FileUpload/FileUploadCtrl.js">
+<div class="bg-light lter b-b wrapper-md">
+  <h1 class="m-n font-thin h3">文件上传</h1>
+  <small class="text-muted">支持拖拽上传、图片预览、进度提示</small>
+</div>
+<div v-controller="FileUploadCtrl"
+     filters="queueLimit, customFilter">
+    <div class="row-fluid hbox hbox-auto-xs hbox-auto-sm" nv-file-drop="" uploader="uploader">
+        <div class="col w-lg bg-light b-r bg-auto">
+            <div class="wrapper-md dker b-b">
+                <h3 class="m-n font-thin">选择文件</h3>
+            </div>
+            <div class="wrapper-md">
+                <div v-show="uploader.isHTML5" class="m-b-md">
+                    <!-- 3. nv-file-over uploader="link" over-class="className" -->
+                    <div class="b-a b-2x b-dashed wrapper-lg bg-white text-center m-b" nv-file-over="" over-class="b-info"
+                         uploader="uploader">
+                        基础拖拽区域
+                    </div>
+
+                    <!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
+                    <div nv-file-drop="" uploader="uploader" options="{ url: '/foo' }">
+                        <div nv-file-over="" uploader="uploader" over-class="b-danger"
+                             class="b-a b-2x b-dashed wrapper-lg lter text-center">
+                            其他设置对应的拖拽区域
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
+                <p>多选文件：</p>
+                <input type="file" nv-file-select="" uploader="uploader" multiple/>
+
+                <p class="m-t-md">单选文件：</p>
+                <input type="file" nv-file-select="" uploader="uploader"/>
+            </div>
+        </div>
+        <div class="col">
+            <div class="wrapper-md bg-light dk b-b">
+                <span class="pull-right m-t-xs">文件个数: <b class="badge bg-info">{{ uploader.queue.length }}</b></span>
+
+                <h3 class="m-n font-thin">上传文件队列</h3>
+            </div>
+            <div class="wrapper-md">
+                <table class="table bg-white-only b-a">
+                    <thead>
+                    <tr>
+                        <th width="50%">文件名称</th>
+                        <th v-show="uploader.isHTML5">大小</th>
+                        <th v-show="uploader.isHTML5">上传进度</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-repeat="item in uploader.queue">
+                        <td><strong>{{ item.file.name }}</strong>
+                        	<div v-if="uploader.isHTML5" >
+                                <div ui-imgpreview="{ file: item._file, height: 100 }"></div>
+                            </div>
+                            <div v-if="!uploader.isHTML5" >
+                                <div ui-imgpreview="{ file: item._input, height: 100,width:200 }"></div>
+                            </div>
+                        </td>
+                        <td v-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                        <td v-show="uploader.isHTML5">
+                            <div class="progress progress-sm m-b-none m-t-xs">
+                                <div class="progress-bar bg-info" role="progressbar"
+                                     v-style="{ 'width': item.progress + '%' }"></div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span v-show="item.isSuccess" class="text-success"><i class="glyphicon glyphicon-ok"></i></span>
+                            <span v-show="item.isCancel" class="text-warning"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                        <span v-show="item.isError" class="text-danger"><i
+                                class="glyphicon glyphicon-remove"></i></span>
+                        </td>
+                        <td nowrap>
+                            <button type="button" class="btn btn-default btn-xs" v-click="item.upload()"
+                                    v-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                上传
+                            </button>
+                            <button type="button" class="btn btn-default btn-xs" v-click="item.cancel()"
+                                    v-disabled="!item.isUploading">
+                                取消
+                            </button>
+                            <button type="button" class="btn btn-default btn-xs" v-click="item.remove()">
+                                移除
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div>
+                        <p>文件队列上传进度:</p>
+
+                        <div class="progress bg-light dker" style="">
+                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar"
+                                 v-style="{ 'width': uploader.progress + '%' }"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-addon btn-success" v-click="uploader.uploadAll()"
+                            v-disabled="!uploader.getNotUploadedItems().length">
+                        <i class="fa fa-arrow-circle-o-up"></i> 全部上传
+                    </button>
+                    <button type="button" class="btn btn-addon btn-warning" v-click="uploader.cancelAll()"
+                            v-disabled="!uploader.isUploading">
+                        <i class="fa fa-ban"></i> 全部取消
+                    </button>
+                    <button type="button" class="btn btn-addon btn-danger" v-click="uploader.clearQueue()"
+                            v-disabled="!uploader.queue.length">
+                        <i class="fa fa-trash-o"></i> 全部移除
+                    </button>
+                    <p class="text-muted m-t-xl">注意：文件通过upload.php上传至目录"source/data/uploads"。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>

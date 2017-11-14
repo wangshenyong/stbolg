@@ -1,0 +1,881 @@
+{
+  "UserSeq": "1000001",
+  "EntEnName": "",
+  "Website": "",
+  "Birthday": "",
+  "Gender": "",
+  "EntCnName": "",
+  "LogoImgLink": "http://192.168.5.10/web/cat.jpg",
+  "AppOrgId": "",
+  "Name": "laichao",
+  "_RejCode": "0000000",
+  "TaxNo": "",
+  "NativePlace": "",
+  "RegDate": "20161111",
+  "RoleList": "1",
+  "_exceptionMessage": "",
+  "Nationality": "",
+  "OrgCode": "",
+  "OrgId": "100",
+  "UserId": "1000001",
+  "_RejMsg": "",
+  "UserType": "",
+  "MenuList":  [
+    {
+      "ActionName": "账户管理",
+      "Level": "1",
+      "root": "AccManage",
+      "MenuList": [
+        {
+          "ActionName": "已开发功能",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "账户绑定",
+              "Level": "3",
+              "ActionId": "AccountBind",
+              "MenuList": []
+            },
+            {
+              "ActionName": "账户详情",
+              "Level": "3",
+              "ActionId": "AccountDetail",
+              "MenuList": []
+            },
+            {
+              "ActionName": "余额查询",
+              "Level": "3",
+              "ActionId": "BalanceQry",
+              "MenuList": []
+            },
+            {
+              "ActionName": "手机充值",
+              "Level": "3",
+              "ActionId": "MobileRecharge",
+              "MenuList": []
+            },{
+              "ActionName": "手机充值查询",
+              "Level": "3",
+              "ActionId": "MobileRechargeOrdQry",
+              "MenuList": []
+            },
+            {
+              "ActionName": "行内转账",
+              "Level": "3",
+              "ActionId": "BankInnerTransfer",
+              "MenuList": []
+            }
+          ]
+        },
+        {
+          "ActionName": "常用",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "账户余额查询",
+              "Level": "3",
+              "ActionId": "BalanceQry",
+              "MenuList": []
+            }, {
+              "ActionName": "账户明细查询",
+              "Level": "3",
+              "ActionId": "BalanceQry",
+              "MenuList": []
+            }, {
+              "ActionName": "账户管理",
+              "Level": "3",
+              "ActionId": "BalanceQry",
+              "MenuList": []
+            }
+          ]
+        },
+        {
+          "ActionName": "账户余额查询",
+          "Level": "2",
+          "ActionId": "BalanceQry",
+          "MenuList": []
+        },
+        {
+          "ActionName": "账户明细查询",
+          "Level": "2",
+          "ActionId": "AccDetailQry",
+          "MenuList": []
+        },
+        {
+          "ActionName": "账户管理",
+          "Level": "2",
+          "ActionId": "LoanQry",
+          "MenuList": []
+        },
+        {
+          "ActionName": "交易明细",
+          "Level": "2",
+          "ActionId": "MbileBankLogQry",
+          "MenuList": []
+        },
+        {
+          "ActionName": "其他",
+          "Level": "2",
+          "ActionId": "OpeateLogQry2",
+          "MenuList": [{
+            "ActionName": "跨行账户查询",
+            "Level": "3",
+            "ActionId": "BalanceQry",
+            "MenuList": []
+          }, {
+            "ActionName": "股金账户查询",
+            "Level": "3",
+            "ActionId": "BalanceQry",
+            "MenuList": []
+          }, {
+            "ActionName": "电子回单",
+            "Level": "3",
+            "ActionId": "BalanceQry",
+            "MenuList": []
+          }, {
+            "ActionName": "缴费记录查询",
+            "Level": "3",
+            "ActionId": "BalanceQry",
+            "MenuList": []
+          }]
+        }
+      ]
+    },
+
+    {
+      "ActionName": "转账汇款",
+      "Level": "1",
+      "root": "TransRemit",
+      "MenuList": [
+        {
+          "ActionName": "常用",
+          "Level": "2",
+          "ActionId": "BankInTrans",
+          "MenuList": [
+            {
+              "ActionName": "行内转账",
+              "Level": "3",
+              "ActionId": "CrossTrans",
+              "MenuList": []
+            },
+            {
+              "ActionName": "跨行转账",
+              "Level": "3",
+              "ActionId": "CrossTrans",
+              "MenuList": []
+            },
+            {
+              "ActionName": "定向转账",
+              "Level": "3",
+              "ActionId": "CrossTrans",
+              "MenuList": []
+            },
+            {
+              "ActionName": "手机号转账",
+              "Level": "3",
+              "ActionId": "CrossTrans",
+              "MenuList": []
+            }]
+        },
+        {
+          "ActionName": "跨行通",
+          "Level": "2",
+          "root": "crossBank",
+          "MenuList": [
+            {
+              "ActionName": "签约管理",
+              "Level": "3",
+              "ActionId": "LiveToBHliCai",
+              "MenuList": []
+            },
+            {
+              "ActionName": "实时归集",
+              "Level": "3",
+              "ActionId": "BHliCaiDraw",
+              "MenuList": []
+            },
+            {
+              "ActionName": "交易记录查询",
+              "Level": "3",
+              "ActionId": "BHliCaiDraw",
+              "MenuList": []
+            },
+            {
+              "ActionName": "授权他行转账",
+              "Level": "3",
+              "ActionId": "BHliCaiDraw",
+              "MenuList": []
+            }
+          ]
+        },
+        {
+          "ActionName": "预约转账管理",
+          "Level": "2",
+          "ActionId": "LiveToLiTrans",
+          "MenuList": []
+        },
+        {
+          "ActionName": "转账结果查询",
+          "Level": "2",
+          "ActionId": "PhoneTrans",
+          "MenuList": []
+        },
+        {
+          "ActionName": "常用收款人管理",
+          "Level": "2",
+          "ActionId": "PhoneTrans",
+          "MenuList": []
+        },
+        {
+          "ActionName": "公益捐款",
+          "Level": "2",
+          "ActionId": "PhoneTrans",
+          "MenuList": []
+        }
+      ]
+    },
+    {
+      "ActionName": "跨行收款",
+      "Level": "1",
+      "root": "FinaProduct",
+      "MenuList": [
+        {
+          "ActionName": "跨行收款",
+          "ActionId": "SaveMoney",
+          "Level": "2"
+        },
+        {
+          "ActionName": "在线签约",
+          "Level": "2",
+          "ActionId": "BHliCai"
+        },
+        {
+          "ActionName": "协议查询",
+          "Level": "2",
+          "ActionId": "DayDayBao"
+        },
+        {
+          "ActionName": "交易结果查询",
+          "Level": "2",
+          "ActionId": "YiMinFina"
+        }
+      ]
+    },
+    {
+      "ActionName": "直销银行",
+      "Level": "1",
+      "root": "CreditCard",
+      "MenuList": [
+        {
+          "ActionName": "开户",
+          "Level": "2",
+          "ActionId": "CrtAccInfo",
+          "MenuList": []
+        },
+        {
+          "ActionName": "充值",
+          "Level": "2",
+          "ActionId": "CrtBillQry",
+          "MenuList": []
+        },
+        {
+          "ActionName": "提现",
+          "Level": "2",
+          "ActionId": "CrtHavBillQry",
+          "MenuList": []
+        },
+        {
+          "ActionName": "销户",
+          "Level": "2",
+          "ActionId": "CrtPayment",
+          "MenuList": []
+        }
+      ]
+    },
+    {
+      "ActionName": "信用卡",
+      "Level": "1",
+      "root": "PersonLoan",
+      "MenuList": [
+        {
+          "ActionName": "信用卡申请",
+          "Level": "2",
+          "ActionId": "PubLoanApply"
+        },
+        {
+          "ActionName": "申请进度查询",
+          "Level": "2",
+          "ActionId": "PubLoanApply"
+        },
+        {
+          "ActionName": "信用卡激活",
+          "Level": "2",
+          "ActionId": "PubLoanApply"
+        },
+        {
+          "ActionName": "账单查询",
+          "Level": "2",
+          "ActionId": "PubLoanApply"
+        },
+        {
+          "ActionName": "信用卡还款",
+          "Level": "2",
+          "ActionId": "PubLoanApply"
+        },
+        {
+          "ActionName": "副卡管理",
+          "Level": "2",
+          "ActionId": "PubLoanApply"
+        },
+        {
+          "ActionName": "额度管理",
+          "Level": "2",
+          "ActionId": "PubLoanApply"
+        }
+      ]
+
+    },
+    {
+      "ActionName": "增值服务",
+      "Level": "1",
+      "root": "PersonSet",
+      "MenuList": [
+        {
+          "ActionName": "缴费充值",
+          "Level": "2",
+          "ActionId": "RelAccManage",
+          "MenuList": [
+            {
+              "ActionName": "水费",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "燃气费",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "电费",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "手机充值",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "固定电话费",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "宽带费",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }]
+        }, {
+          "ActionName": "Q币及游戏充值",
+          "Level": "2",
+          "ActionId": "SecrtInfoSet",
+          "MenuList": [
+            {
+              "ActionName": "Q币充值",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "游戏充值",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }]
+        }, {
+          "ActionName": "交易明细",
+          "Level": "2",
+          "ActionId": "SecrtInfoSet",
+          "MenuList": [
+            {
+              "ActionName": "缴费查询",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "缴费查询",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }]
+        }, {
+          "ActionName": "其他",
+          "Level": "2",
+          "ActionId": "SecrtInfoSet",
+          "MenuList": [
+            {
+              "ActionName": "报刊订阅",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "场地预定",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "景点门票",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "演出票",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "机票",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "酒店",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }]
+        }
+      ]
+    },
+    {
+      "ActionName": "理财业务",
+      "Level": "1",
+      "root": "CityCard",
+      "MenuList": [
+        {
+          "ActionName": "定期存款",
+          "Level": "2",
+          "ActionId": "CityCardRech",
+          "MenuList": [
+            {
+              "ActionName": "存入定期存款",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "我的定期存款",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "定期存款支取",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            }
+          ]
+        }, {
+          "ActionName": "通知存款",
+          "Level": "2",
+          "MenuList": [{
+            "ActionName": "我的通知存款",
+            "Level": "3",
+            "ActionId": "FriedAcBalQry"
+          }, {
+            "ActionName": "存入通知存款",
+            "Level": "3",
+            "ActionId": "FriedAcBalQry"
+          }, {
+            "ActionName": "通知存款转活期",
+            "Level": "3",
+            "ActionId": "FriedAcBalQry"
+          }, {
+            "ActionName": "通知取款",
+            "Level": "3",
+            "ActionId": "FriedAcBalQry"
+          }, {
+            "ActionName": "通知取款取消",
+            "Level": "3",
+            "ActionId": "FriedAcBalQry"
+          }, {
+            "ActionName": "活期约定转存",
+            "Level": "3",
+            "ActionId": "FriedAcBalQry"
+          }]
+        }, {
+          "ActionName": "周周乐",
+          "Level": "2",
+          "ActionId": "FriedAcBalQry",
+          "MenuList": [{
+
+            "ActionName": "活期转周周乐",
+            "Level": "3",
+            "ActionId": "SocSecQry",
+            "MenuList": []
+          }, {
+
+            "ActionName": "周周乐转活期",
+            "Level": "3",
+            "ActionId": "SocSecQry",
+            "MenuList": []
+          }, {
+
+            "ActionName": "周周乐查询",
+            "Level": "3",
+            "ActionId": "SocSecQry",
+            "MenuList": []
+          }]
+        }, {
+          "ActionName": "理财产品",
+          "Level": "2",
+          "MenuList": [{
+            "ActionName": "在售产品",
+            "Level": "3",
+            "ActionId": "SocSecQry",
+            "MenuList": []
+          }, {
+
+            "ActionName": "我的持有理财",
+            "Level": "3",
+            "ActionId": "SocSecQry",
+            "MenuList": []
+          }, {
+            "ActionName": "委托撤销",
+            "Level": "3",
+            "ActionId": "SocSecQry",
+            "MenuList": []
+          }, {
+
+            "ActionName": "交易明细查询",
+            "Level": "3",
+            "ActionId": "SocSecQry",
+            "MenuList": []
+          }]
+        }, {
+          "ActionName": "网上基金",
+          "Level": "2",
+          "ActionId": "MedInsureInfo",
+          "MenuList": [
+            {
+              "ActionName": "签约信息管理",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "风险评估",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+              "ActionName": "产品查询及购买",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "基金赎回",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "持仓查询",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+              "ActionName": "基金交易查询",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "基金定投",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }
+          ]
+        }, {
+          "ActionName": "银期业务",
+          "Level": "2",
+          "ActionId": "MedInsureInfo",
+          "MenuList": [
+            {
+              "ActionName": "签约",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "签约管理",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+              "ActionName": "签约信息查询",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "签约卡号变更",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "签约信息变更",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+              "ActionName": "撤约",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "银行转期货",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+              "ActionName": "期货转银行",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }
+          ]
+        }, {
+          "ActionName": "大额存单",
+          "Level": "2",
+          "ActionId": "MedInsureInfo",
+          "MenuList": [{
+            "ActionName": "大额存单购买",
+            "Level": "3",
+            "ActionId": "SocSecQry",
+            "MenuList": []
+          }, {
+
+            "ActionName": "提前支取",
+            "Level": "3",
+            "ActionId": "SocSecQry",
+            "MenuList": []
+          }]
+
+        }, {
+          "ActionName": "理财助手",
+          "Level": "2",
+          "ActionId": "MedInsureInfo",
+          "MenuList": [
+            {
+              "ActionName": "存款计算器",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "理财计算器",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+              "ActionName": "理财日历",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }, {
+
+              "ActionName": "外汇行情",
+              "Level": "3",
+              "ActionId": "SocSecQry",
+              "MenuList": []
+            }]
+
+        }
+      ]
+    },
+    {
+      "ActionName": "外汇业务",
+      "Level": "1",
+      "root": "AssistFunction",
+      "MenuList": [
+        {
+          "ActionName": "境外汇款",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "境外汇款发汇",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "境外汇款查询",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "常用收款人管理",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            }
+          ]
+        }, {
+          "ActionName": "西联汇款",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "西联汇款收汇",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "西联汇款发汇",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "西联汇款查询",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "常用收款人管理",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            }
+          ]
+        }, {
+          "ActionName": "个人结售汇",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "结售汇报价",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "购汇",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "结汇",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "交易明细查询",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            }
+          ]
+        }, {
+          "ActionName": "外汇交易",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "实盘交易",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "保证金交易",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "成交详细查询",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "交易详细查询",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            },
+            {
+              "ActionName": "交易账户管理",
+              "Level": "3",
+              "ActionId": "ConsuDetailQry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ActionName": "客户服务",
+      "Level": "1",
+      "root": "AssistFunction",
+      "MenuList": [
+        {
+          "ActionName": "短信通知维护",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "短信通知签约",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "短信通知续费",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "短信通知修改",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }
+          ]
+        },
+        {
+          "ActionName": "电话银行维护",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "电话银行签约",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "重置查询密码",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "签约信息维护",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "电话银行账号维护",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }
+          ]
+        },
+        {
+          "ActionName": "个性化页面配置",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "快捷功能设置",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "页面风格设置",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }
+          ]
+        },
+
+        {
+          "ActionName": "金融助手",
+          "Level": "2",
+          "MenuList": [
+            {
+              "ActionName": "资费标准",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "存贷款利率",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }, {
+              "ActionName": "信用卡服务费",
+              "Level": "3",
+              "ActionId": "BankNotice"
+            }
+          ]
+        },
+        {
+          "ActionName": "在线客服",
+          "Level": "2",
+          "ActionId": "BankNotice"
+        }
+      ]
+    }
+  ]
+}

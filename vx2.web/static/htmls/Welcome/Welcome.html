@@ -1,0 +1,105 @@
+<div v-lazy-load="htmls/Welcome/Welcome.js">
+	<div v-controller="WelcomeCtrl" v-init="startup()">
+		<!--广告栏-->
+		<div class="swiper-container swiper2">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background:url(images/img1.jpg) center center no-repeat"></div>
+				<div class="swiper-slide" style="background:url(images/img3.jpg) center center no-repeat"></div>
+				<div class="swiper-slide" style="background:url(images/img3.jpg) center center no-repeat"></div>
+			</div>
+			<div class="swiper-pagination pagination2"></div>
+		</div>
+
+		<div class="toolsBox">
+			<div class="mBox">
+				<p class="notice">最新公告：<span>欢迎体验北京农商银行新版网银～</span><a class="right">更多&gt;&gt;</a></p>
+
+				<div class="userBox">
+					<dl>
+						<dt><img src="images/head.jpg"/><span class="red" v-bind="Username"></span> 上午好～</dt>
+						<dd>
+							<p>我的消息：<a><i class="massage"></i>2条</a><span>预留信息：<em>一米阳光</em></span></p>
+
+							<p>上次登录渠道：<em>网上银行</em><span v-show="isGray" class="blue"><a href="" v-click="goGray()">试用灰度版本</a></span></p>
+
+							<p>上次登录时间：<em>2016-08-19 20:09:23</em><a class="btnSet">设置</a></p>
+						</dd>
+					</dl>
+				</div>
+				<div class="toolsBox2">
+
+					<div class="swiper-container swiper3">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/tools1.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools2.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools3.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools4.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools5.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools6.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools7.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools1.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools2.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools3.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools4.jpg"></div>
+							<div class="swiper-slide"><img src="images/tools5.jpg"></div>
+						</div>
+					</div>
+					<div class="swiper-button-prev swpier3-prev"></div>
+					<div class="swiper-button-next swpier3-next"></div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper">
+
+
+			<div class="mycountBox">
+
+				<div class="swiper-container swiper4">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" v-repeat="row in AccList">
+							<div class="card">
+								<p class="name">
+									{{row.AcName}}
+								</p>
+
+								<p class="num">
+									{{row.AcNo|accountNoFilter}}
+								</p>
+
+								<p class="money">
+									可用金额(元):<span>待查询</span>
+								</p>
+								<a class="btn" v-click="goto('/BalanceQry')">查询余额</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-prev swpier4-prev"></div>
+				<div class="swiper-button-next swpier4-next"></div>
+				<div class="btnbox">
+					<input type="button" value="转账汇款">
+					<input type="button" value="账户查询">
+				</div>
+			</div>
+
+			<div class="bigimg2">
+
+				<ul>
+					<li><input name="" type="text" placeholder="请输入手机号码"></li>
+					<li><select>
+						<option>50</option>
+						<option>100</option>
+					</select></li>
+					<li>售价<span>¥49-49.8</span></li>
+					<li><input type="button" value="立即充值"></li>
+				</ul>
+
+			</div>
+
+
+		</div>
+	</div>
+</div>

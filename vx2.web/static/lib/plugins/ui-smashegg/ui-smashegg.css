@@ -1,0 +1,90 @@
+.uiSmashegg {width: 100%;}
+/*金蛋晃动 starting*/
+.uiSmashegg .jd_01bg {width: 100%;margin: 0 auto;overflow: hidden;position: relative;}
+.uiSmashegg .jd_01bg img {width: 100%;}
+.uiSmashegg .jd_01_01 {width: 100%;position: absolute;margin: 0 auto;z-index: 99;top: 0%;left: 0px;}
+.uiSmashegg .jd_01_01 img {width: 100%;}
+.uiSmashegg .jd_01 {-webkit-animation: jd_01 0.05s  infinite ;animation: jd_01 0.05s infinite ;animation-direction: alternate;-webkit-animation-direction: alternate;animation-iteration-count: 10}
+@keyframes jd_01
+{
+	0%
+	{transform: rotate(5deg);}
+	100%
+	{transform: rotate(0deg);}
+}
+@-webkit-keyframes jd_01
+{
+   0%
+	{transform: rotate(5deg);}
+	100%
+	{transform: rotate(0deg);}
+}
+.uiSmashegg .jd_01 img {width: 100%;}
+/*金蛋晃动 ending*/
+.uiSmashegg .jd_02 {width: 100%;position: absolute;margin: 0 auto;z-index: 100;top: 0%;left: 0px;}
+.uiSmashegg .jd_02 img {width: 100%;}
+/*小锤摆动  starting*/
+.uiSmashegg .jd_03_01 {width: 100%;position: absolute;z-index: 101;top: 17%;right: 2%;text-align: right;}
+.uiSmashegg .jd_03_01 img {width: 30%;}
+.uiSmashegg .jd_03 {animation: jd_03 0.5s;-webkit-transform-origin: bottom right;}
+.uiSmashegg .jd_03 img {width: 30%;}
+@keyframes jd_03
+{
+	0%
+	{transform: rotate(-20deg);}
+	100%
+	{transform: rotate(0deg);}
+}
+/*小锤摆动 ending*/
+.uiSmashegg .jd_conter {width: 100%;position: absolute;top: 50%;z-index: 101;margin-top: 70px;}
+.uiSmashegg .jd_04 {width: 95%;float: left;text-align: right;margin-right: 5%;}
+.uiSmashegg .jd_04 img {width: 40%;}
+.uiSmashegg .jd_05 {width: 100%;float: left;text-align: center;margin-top: 10px;}
+.uiSmashegg .jd_05 img {width: 90%;}
+.uiSmashegg .jd_text {width: 90%;margin: 0 auto;margin-top: 10%;}
+.uiSmashegg .jd_text h1 {color: #efea36;font-size: 18px;font-weight: normal;font-family: "微软雅黑";line-height: 40px;}
+.uiSmashegg .jd_text p {color: #ffffff;font-size: 14px;line-height: 30px;}
+.uiSmashegg .yell_text {width: 90%;margin: 0 auto;top: 19%;left: 12%;z-index: 120;color: #f8d700;font-size: 2em;position: absolute;text-align: center;display:none;font-family:"微软雅黑"}
+/*彩带  starting*/
+.uiSmashegg .zd_bigcaidai{position: absolute;top:-35.7%;left:-31.4%;width: 556px;height: 420px;overflow: hidden;}
+.uiSmashegg .cardai07{-webkit-animation: cardai 1s cubic-bezier(0.34, -0.1, 0.32, 1.01) infinite alternate;animation: cardai 1s cubic-bezier(0.34, -0.1, 0.32, 1.01) infinite alternate;}
+@keyframes cardai
+{
+	0%
+	{opacity: 1;}
+	50%
+	{opacity: 0.2;}
+	100%
+	{opacity: 1;}
+}
+@-webkit-keyframes cardai
+{
+   0%
+	{opacity: 1;}
+	50%
+	{opacity: 0.2;}
+	100%
+	{opacity: 1;}
+}
+.uiSmashegg .cardai01{position: absolute;top: 145px;left: 112px;display: none;}
+.uiSmashegg .cardai02{position: absolute;top: 420px;left: 243px;}
+.uiSmashegg .cardai03{position: absolute;top: 420px;left:243px;}
+.uiSmashegg .cardai04{position: absolute;top: 420px;left: 190px;}
+.uiSmashegg .cardai05{position: absolute;top: 420px;left: 220px;}
+.uiSmashegg .cardai06{position: absolute;top: 420px;left: 243px;}
+/*彩带  ending*/
+/*所有注释尺寸以iphone 为基准*/
+@media screen and (min-width: 320px) and (max-width: 375px) {
+	.uiSmashegg .zd_bigcaidai{top:-35.7%;left:-31.4%;}
+}
+@media screen and (min-width: 375px) and (max-width: 413px) {
+	.uiSmashegg .zd_bigcaidai{top:-18.4%;left:-21.2%;}
+}
+@media screen and (min-width: 414px) and (max-width: 540px) {
+	.uiSmashegg .zd_bigcaidai{top:-8.1%;left:-11.9%;}
+}
+
+/*覆盖部分样式，根据项目实际情况而定*/
+body, .example-content,  .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+    padding: 0;
+}

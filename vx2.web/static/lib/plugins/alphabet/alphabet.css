@@ -1,0 +1,38 @@
+/**收款人列表的效果*/
+
+.zimu .well {
+    padding: 0 5px;
+    margin: 15px -20px 0 -20px;
+    border: 1px solid #a07bc0;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: -webkit-linear-gradient(top, #fff, #fafafa);
+}
+
+.zimu-show {
+    position: fixed;
+    top: 50%;
+    left: 97%;
+    right: 10px;
+}
+
+.zimu-siggle {
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+}
+
+.row-city-char {
+    background-color: #E8D8F0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 -5px;
+}
+
+.color-purple {
+    font-size: 16px;
+}
+/*收款人列表结束*/
